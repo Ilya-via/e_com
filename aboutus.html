@@ -1159,7 +1159,7 @@
         </div>
         <!-- / end content -->
         <footer>
-            <div class="f-top">
+            <!-- <div class="f-top">
                 <div class="container container-240">
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
@@ -1180,7 +1180,7 @@
                                     <li class="time">
                                         <span>Режим работы: 24/7</span>
                                     </li>
-                                    <li><span> ЕРИП, Белпочта</span></li>
+                                    <li class="email"><span> ЕРИП, Белпочта</span></li>
                                 </ul>
                                 <div class="footer-social social">
                                     <h3 class="footer-block-title"> Следите за нами в instagram</h3>
@@ -1193,7 +1193,7 @@
                                 <h3 class="footer-block-title">Наш сервис</h3>
                                 <ul class="footer-block-content">
                                     <li><a href="aboutus.html">Контакты</a></li>
-                                    <li><a href="#">Связаться с директором </a></li>
+                                    <li><a onclick="showDir()" href="#">Связаться с директором </a></li>
                                     <li><a href="#">Каталог</a></li>
                                 </ul>
                             </div>
@@ -1231,7 +1231,81 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div class="f-top">
+                <div class="footer__wrapper">
+                    <div class="footer__container">
+                        <div class="footer__item-1">
+                            <div class="footer-block footer-about">
+                                <div class="f-logo">
+                                    <a href="#"><img src="img/logo.svg" alt="" class="img-reponsive"></a>
+                                </div>
+                                <ul class="footer-block-content">
+                                    <li class="address">
+                                        <span>Республика Беларусь</span>
+                                    </li>
+                                    <li class="phone">
+                                        <a href="tel:+375298853816">+375 (29) 885-38-16</a>
+                                    </li>
+                                    <li class="email">
+                                        <span>yekommers@bk.ru</span>
+                                    </li>
+                                    <li class="time">
+                                        <span>Режим работы: 24/7</span>
+                                    </li>
+                                    <li class="email"><span> ЕРИП, Белпочта</span></li>
+                                </ul>
+                                <div class="footer-social social">
+                                    <h3 class="footer-block-title"> Следите за нами в instagram</h3>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__item-2">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Наш сервис</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="aboutus.html">Контакты</a></li>
+                                    <li><a onclick="showDir()" href="#">Связаться с директором </a></li>
+                                    <li><a href="#">Каталог</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__item-3">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Информация</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="aboutus.html">О нас</a></li>
+                                    <li><a href="#">Доставка </a></li>
+                                    <li><a href="politics.html" target="_blank">Политика конфиденциальности</a></li>
+                                    <li><a href="oferta.pdf" target="_blank">Публичная оферта </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__item-4">
+                            <div class="footer-block">
+                                <div class="footer-block-phone">
+                                    <h3 class="footer-block-title">Горячая линия</h3>
+                                    <a href="tel:+375298853816" class="phone-light">+375 (29) 885-38-16</a>
+                                </div>
+                                <div class="footer-block-newsletter">
+                                    <h3 class="footer-block-title">Получайте СКИДКУ ДО 70%</h3>
+                                    <p>Подпишитесь на наши новости, указав email и получите скидку</p>
+                                    <form class="form_newsletter" action="#" method="post">
+                                        <input type="email" value="" placeholder="Введите ваш email" name="EMAIL"
+                                            id="mail" class="newsletter-input form-control">
+                                        <button id="subscribe" class="button_mini btn btn-gradient" type="submit">
+                                            Отправить
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="f-bottom">
                 <div class="container container-240">
                     <div class="row flex lr">
@@ -1259,6 +1333,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/sweetalert2.js"></script>
 </body>
 
 </html>

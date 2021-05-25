@@ -1,6 +1,3 @@
-/**
-	
- **/
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -16857,17 +16854,17 @@ span.star:before {
   color: #666666; }
 .footer-about ul .address {
   background: url("../img/icon-map.png") no-repeat left top;
-  background-position: left 14px;
+  background-position: left 0 top 14px;
   max-width: 340px; }
 .footer-about ul .phone {
   background: url("../img/f-phone.png") no-repeat left top;
-  background-position: left 14px; }
+  background-position: left 0 top 20px; }
 .footer-about ul .email {
   background: url("../img/f-mail.png") no-repeat left top;
-  background-position: left 14px; }
+  background-position: left 0 top 17px; }
 .footer-about ul .time {
   background: url("../img/f-time.png") no-repeat left top;
-  background-position: left 14px; }
+  background-position: left 0 top 14px; }
 
 .footer-social {
   margin-top: 32px; }
@@ -17087,6 +17084,65 @@ footer .f-top {
 @media (max-width: 767px) {
   .f-bottom [class*="col-xs-"] {
     width: 100%; } }
+  .inputq {
+      height: 40px;
+      padding-left: 10px;
+      margin-top: 20px;
+      width: 90%;
+  }
+  textarea {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.order_form1 button {
+  width: 90%;
+    height: 50px;
+  color: white;
+  background-color: steelblue;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 18px;
+}
+
+.footer__wrapper{
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer__item-1,
+.footer__item-2,
+.footer__item-3,
+.footer__item-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 940px) {
+
+  .footer__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+
+  }
+  .footer__item-1,
+  .footer__item-2,
+  .footer__item-3,
+  .footer__item-4 {
+      margin-left: calc(50% - 140px );
+  }
+}
 
 /*
 	6.3. Homepages
