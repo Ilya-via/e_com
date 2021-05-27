@@ -11972,7 +11972,8 @@ span.star:before {
       height: 44px;
       line-height: 44px;
       font-size: 16px;
-      width: 174px;
+      /* width: 174px; */
+      width: 200px;
       font-weight: bold;
       color: #666666;
       background: #fff;
@@ -12019,7 +12020,7 @@ span.star:before {
       .product-tab-sw.v2 {
         margin-bottom: 20px; } }
     .product-tab-sw.v2 li a {
-      font-size: 18px; }
+      font-size: 16px; }
 
 .releases .product-tab-sw2 {
   background: transparent; }
@@ -17952,8 +17953,7 @@ footer .f-top {
     display: flex;
     justify-content: center;
     margin-bottom: 10px; }
-    .e-feature .feature-block-img img {
-      opacity: 0.2; }
+
   @media (max-width: 767px) {
     .e-feature .feature-item {
       margin-bottom: 30px;
