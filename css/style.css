@@ -90,6 +90,10 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
+a, li, p {
+	font-feature-settings: "pnum" on,"lnum" on;
+}
+
 body {
 	margin: 0;
 }
@@ -10565,11 +10569,18 @@ span.star:before {
 
 .banner-callus.spc5 {
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
+@media (max-width: 520px) {
+	.banner-callus.spc5 {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
 @media (min-width: 1025px) {
 	.banner-callus.spc5 {
-		margin-top: -136px;
+		/* margin-top: -136px; */
 	}
 }
 
@@ -11494,8 +11505,6 @@ span.star:before {
 	justify-content: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -12626,15 +12635,22 @@ span.star:before {
 }
 
 .banner-callus .btn-callus {
+	font-size: 16px;
 	font-weight: 500;
-	color: #fff;
-	border-bottom: 1px solid #fff;
+	align-self: flex-end;
+	color: #000;
+	border-bottom: 1px solid #000;
+	/* color: #fff;
+	border-bottom: 1px solid #fff; */
+	margin-bottom: 5px;
 }
 
-@media (min-width: 480px) {
+
+@media (max-width: 520px) {
 	.banner-callus .btn-callus {
-		font-size: 16px;
-		padding-bottom: 6px;
+		font-size: 12px;
+		margin-bottom: 2px;
+		line-height: 100%;
 	}
 }
 
@@ -14065,7 +14081,9 @@ span.star:before {
 	left: -13px;
 	color: #bfbfbf;
 }
-
+.desc-list li b {
+	color: #666666;
+}
 .product-grid-v2 .product-rating {
 	display: -webkit-box;
 	/* OLD - iOS 6-, Safari 3.1-6 */
@@ -23729,7 +23747,7 @@ span.star:before {
 .widget-verticalmenu .navbar-toggles {
 	position: relative;
 	height: 57px;
-	width: 100%;
+	width: 250px;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
@@ -24845,21 +24863,24 @@ textarea {
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.ads-group.v2.bd-slick .banner-img img {
 		width: 100%;
 	}
+
 	.ads-group_v2_item {
 		width: 80% !important;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
+
 @media (max-width: 600px) {
 	.ads-group_v2_item {
 		width: 95% !important;
 		padding: 0 !important;
 		margin: 0 !important;
-		}
+	}
 }
 
 
@@ -27659,6 +27680,77 @@ textarea {
 
 #product-tab_1 .slick-slide.slick-current>div {
 	display: flex;
+}
+
+/* СТРАНИЦА ТОВАРА */
+.phone-number {
+	font-size: 18px;
+}
+
+/* Отзывы */
+#review .author_block {
+	margin-bottom: 10px;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#review .author_block img {
+	display: block;
+	float: left;
+	width: 55px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#review .author_block .author_info {
+	float: left;
+	margin: 6px 0 0 20px;
+}
+
+#review .author_block .name {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+}
+#review .author_block .text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 100%;
+}
+
+#review .review__item {
+	margin: 10px 10px 10px 20px;
+}
+
+#review .review__item:not(:last-child) {
+	margin-bottom: 45px;
+}
+
+#review .review__item-text {
+	padding: 0;
+	font-size: 18px;
+}
+
+@media (max-width:768px) {
+	#review .review__item-text {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}
+
+@media (max-width:400px) {
+	#review .review__item-text {
+		font-size: 14px;
+	}
+
+	#review .review__item:not(:last-child) {
+		margin-bottom: 35px;
+	}
 }
 
 @media (max-width: 1199px) {
