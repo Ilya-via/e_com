@@ -90,8 +90,10 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-a, li, p {
-	font-feature-settings: "pnum" on,"lnum" on;
+a,
+li,
+p {
+	font-feature-settings: "pnum"on, "lnum"on;
 }
 
 body {
@@ -10578,6 +10580,7 @@ span.star:before {
 		margin-bottom: 15px;
 	}
 }
+
 @media (min-width: 1025px) {
 	.banner-callus.spc5 {
 		/* margin-top: -136px; */
@@ -14081,9 +14084,11 @@ span.star:before {
 	left: -13px;
 	color: #bfbfbf;
 }
+
 .desc-list li b {
 	color: #666666;
 }
+
 .product-grid-v2 .product-rating {
 	display: -webkit-box;
 	/* OLD - iOS 6-, Safari 3.1-6 */
@@ -23878,6 +23883,12 @@ span.star:before {
 	}
 }
 
+.vertical-menu::-webkit-scrollbar {
+	width: 0;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
 .vertical-menu {
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
@@ -23897,6 +23908,7 @@ span.star:before {
 	border-radius: 10px;
 	color: #333;
 	padding: 30px;
+	overflow: scroll;
 }
 
 .vertical-menu.v2 {
@@ -23945,9 +23957,13 @@ span.star:before {
 	margin-top: 10px;
 }
 
+.vertical-menu .vertical-menu1 li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
 .vertical-menu .vertical-menu1 li>a {
 	color: #666;
-	line-height: 35px;
+	line-height: 125%;
 }
 
 .vertical-menu .vertical-menu1 li>a:hover {
@@ -27715,6 +27731,7 @@ textarea {
 	font-size: 16px;
 	line-height: 24px;
 }
+
 #review .author_block .text {
 	font-weight: 400;
 	font-size: 16px;
@@ -27735,14 +27752,16 @@ textarea {
 }
 
 /* Modal popUp */
-div[aria-describedby="swal2-content"]{
-	padding-left:0 ;
-	padding-right:0 ;
+div[aria-describedby="swal2-content"] {
+	padding-left: 0;
+	padding-right: 0;
 }
-.swal2-content{
-	padding-left:8px !important;
-	padding-right:8px !important;
+
+.swal2-content {
+	padding-left: 8px !important;
+	padding-right: 8px !important;
 }
+
 .box-modal {
 	position: relative;
 	width: 100%;
@@ -27775,6 +27794,7 @@ div[aria-describedby="swal2-content"]{
 	line-height: 125%;
 	font-weight: 700;
 }
+
 .card_price {
 	display: flex;
 	justify-content: space-evenly;
@@ -27791,9 +27811,11 @@ div[aria-describedby="swal2-content"]{
 	align-items: center;
 	text-decoration: line-through;
 }
+
 .new_price__number {
 	color: #ff5050;
 }
+
 .new_price {
 	width: 50%;
 	display: flex;
@@ -27801,12 +27823,14 @@ div[aria-describedby="swal2-content"]{
 	justify-content: center;
 	align-items: center;
 }
+
 .box-modal__tov_info {
 	margin: 15px auto 5px;
 	font-size: 16px;
 	line-height: 125%;
 	text-decoration: underline;
 }
+
 .order_form {
 	display: flex;
 	flex-direction: column;
@@ -27814,7 +27838,8 @@ div[aria-describedby="swal2-content"]{
 	align-items: center;
 	width: 100%;
 }
-.order_form > input {
+
+.order_form>input {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
@@ -27822,18 +27847,18 @@ div[aria-describedby="swal2-content"]{
 	padding-left: 15px;
 	border: 1px solid gray;
 }
-.order_form > button {
+
+.order_form>button {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
 	margin: 5px;
 	border: none;
-			background: linear-gradient(
-		122deg
-		, #c26af5, #54f0ff);
+	background: linear-gradient(122deg, #c26af5, #54f0ff);
 	color: #fff;
 	font-size: 24px;
 }
+
 @media (max-width:768px) {
 	#review .review__item-text {
 		font-size: 16px;

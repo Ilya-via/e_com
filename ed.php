@@ -10,7 +10,7 @@ $email = "Ed.baranovskiy@mail.ru";
 $title = "Связь с директором";
 
 $text = "
-Обращение клиента:
+Обращение клиента (новый главный сайт):
 
 Имя: ".$_POST['name']."
 Телефон: ".$_POST['phone']."
@@ -22,7 +22,8 @@ $text = "
 mail($email, $title, $text);
 
 if(mail($email, $title, $text)) {
-    header('Location: https://luuk.by');
+    // header('Location: https://luuk.by');
+    header('Location: https://test.luuk.by/test__e_com/home5.html');
 } else {
     echo "Ошибка.";
 }
