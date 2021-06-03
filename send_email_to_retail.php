@@ -56,7 +56,7 @@ email: ".$_POST['EMAIL']."
 Время заказа: ".date("Y-m-d H:i:s");
 
 if(mail($email, $title, $text)) {
-	header('Location: /test__e_com/home5.html#footer');
+	header('Location: /test__e_com/index.html#footer');
 } else {
 	echo "Ошибка.";
 }
@@ -66,7 +66,7 @@ if(mail($email, $title, $text)) {
 <!-- Переадресация на главную страницу сайта, через 3 секунды -->
 <script language="JavaScript" type="text/javascript">
 	function changeurl() {
-		eval(self.location = "/test__e_com/home5.html#footer");
+		eval(self.location = "/test__e_com/index.html#footer");
 	}
 	window.setTimeout("changeurl();", 2500);
 	

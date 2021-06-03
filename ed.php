@@ -23,7 +23,7 @@ mail($email, $title, $text);
 
 if(mail($email, $title, $text)) {
     // header('Location: https://luuk.by');
-    header('Location: https://test.luuk.by/test__e_com/home5.html');
+    header('Location: https://test.luuk.by/test__e_com/index.html');
 } else {
     echo "Ошибка.";
 }
