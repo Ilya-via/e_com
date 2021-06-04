@@ -697,7 +697,7 @@
 																	</div> -->
 											</li>
 											<li class="level1 active dropdown">
-												<a href="#">Контакты</a>
+												<a href="/contacts.html">Контакты</a>
 											</li>
 
 										</ul>
@@ -719,7 +719,7 @@
 		<div class="container container-240">
 			<div class="single-product-detail product-bundle product-aff">
 				<ul class="breadcrumb">
-					<li><a href="#"></a>Главная</li>
+					<li><a href="/">Главная</a></li>
 					<li><a href="#" class="active"></a>Техника</li>
 					<li><a href="#" class="active"></a>Робот Пылесос</li>
 				</ul>
@@ -837,14 +837,22 @@
 												<a class="js-minus quantity-left-minus"><i class="fa fa-caret-down"></i></a>
 											</div>
 										</div>
-										<a href="#" class="btn-add-cart">в корзину<span class="icon-bg icon-cart v2"></span></a>
+										<a href="#" class="btn-add-cart"
+										onclick="openItemModal(
+											'robot_1',
+											'Робот Пылесос',
+											'img/product/hit_tov_4.png',
+											'202',
+											'99',
+											'true',
+									),getInputValue()">заказать<span class="icon-bg icon-cart v2"></span></a>
 									</div>
-									<a href="#" class="e-btn btn-icon">
+									<!-- <a href="#" class="e-btn btn-icon">
 										<span class="icon-bg icon-wishlist"></span>
 									</a>
 									<a href="#" class="e-btn btn-icon">
 										<span class="icon-bg icon-compare"></span>
-									</a>
+									</a> -->
 								</div>
 
 								<div class="product-tags">
@@ -1859,7 +1867,7 @@
 							<div class="footer-block">
 								<h3 class="footer-block-title">Наш сервис</h3>
 								<ul class="footer-block-content">
-									<li><a href="/aboutus.html">Контакты</a></li>
+									<li><a href="/contacts.html">Контакты</a></li>
 									<li><a onclick="showDir()" href="#">Связаться с директором </a></li>
 									<li><a href="/shop_full.html">Каталог</a></li>
 								</ul>

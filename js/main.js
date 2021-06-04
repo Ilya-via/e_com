@@ -871,7 +871,7 @@ function showDir() {
 	Swal.fire({
 		title: "Помогите нам развиваться быстрее. ",
 		html: `<h3 style="font-size:120%;">Задайте вопрос, поделитесь мнением о продукте и сервисе, расскажите, как улучшить сайт или работу специалистов. Все замечания и предложения важны, ведь благодаря вашему мнению мы становимся лучше.</h3>
-      <form class="order_form1" method="POST" action="ed.php">
+      <form class="order_form1" method="POST" action="send_email_to_retail.php">
       <div>
       <input autocomplete="off" name='name' class="inputq" placeholder="Введите ваше имя"/>
       </div>
@@ -897,8 +897,7 @@ function openItemModal(
 	price_old,
 	price_new,
 	special,
-	someData
-) {
+	) {
 
 
 	Swal.fire({
@@ -913,15 +912,12 @@ function openItemModal(
 		<div class="new_price"><span>новая цена:</span><span class="new_price__number">${price_new} руб</span></div>
 		</div>
 		<br>
-		<div>
-		<p class="box-modal__tov_info">Информация о товаре</p>
-		<p>${someData}</p>
-		</div>
-		<br>
-		<form id="order_form" class="order_form" action="../core/send.php" method="post">
+			<br>
+		<form id="order_form" class="order_form" action="send_tovar_to_retail.php" method="post">
+		<input type="hidden" class="input" placeholder="Количество" id="col_item" name="colichestvo" value="">
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="color_item" name="product" value="${id}">
-		<input class="input" id="name" type="text" name="name" placeholder="Имя: Иван" required="">
-		<input class="input" id="phone" type="tel" name="phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
+		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
+		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
 		<button class="button">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
@@ -931,4 +927,8 @@ function openItemModal(
     `,
 	});
 
+}
+
+function getInputValue(){
+	Number($('#col_item').val(`${$('.e-quantity input').val()}`));
 }

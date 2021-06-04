@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Страница благодарности</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			font-family: "Courier New", Courier, monospace;
+		}
+
+		.wrap {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 45px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<h1>Спасибо за заказ, наш менеджер с вами свяжется</h1>
+	</div>
+</body>
+
+<!-- Переадресация на главную страницу сайта, через 3 секунды -->
+<script language="JavaScript" type="text/javascript">
+	function changeurl() {
+		eval(self.location = "/");
+	}
+	window.setTimeout("changeurl();", 2500);
+</script>
+
+</html>

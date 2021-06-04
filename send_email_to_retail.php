@@ -4,7 +4,6 @@ header("Content-Type: text/html; charset=utf-8");
 
 $email = $_POST['EMAIL'];
 // $phone = $_POST['phone'];
-
 // $price = '0';
 $country_id = 'BY';
 
@@ -19,12 +18,9 @@ $postData = http_build_query(array(
 				'orderMethod' => 'phone',
 			  'customFields' => array(
             'type_sales' => 6,
-					
 ),
         // 'managerComment' => 'СДЕЛКУ ПОКАЖИТЕ МАКСИМУ, она с главного сайта',
-      
     )),
-			
 			// 	'OrderMethod' => 'phone',
     'apiKey' => $RETAIL_API_KEY,
 ));
@@ -66,7 +62,7 @@ if(mail($email, $title, $text)) {
 <!-- Переадресация на главную страницу сайта, через 3 секунды -->
 <script language="JavaScript" type="text/javascript">
 	function changeurl() {
-		eval(self.location = "/test__e_com/index.html#footer");
+		eval(self.location = "/#footer");
 	}
 	window.setTimeout("changeurl();", 2500);
 	

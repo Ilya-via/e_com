@@ -28087,6 +28087,34 @@ div[aria-describedby="swal2-content"] {
 	color: #fff;
 	font-size: 24px;
 }
+section.contacts {
+	margin-bottom: 25px;
+}
+.icon-mail,.icon-location {
+	position: relative;
+padding-left: 20px;
+}
+ 
+.icon-mail:before,
+.icon-location:before {
+	top: 2px;
+	left: 0;
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-mail:before {
+	background-image: url(../img/mail.svg);
+}
+.icon-location:before {
+	background-image: url(../img/geo.svg);
+}
+
+#category-list_1 .btn-shopcate {
+	display: none;
+}
 
 @media (max-width:768px) {
 	#review .review__item-text {

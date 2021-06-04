@@ -749,18 +749,18 @@
 					</div>
 					<div class="col-12 col-lg-6">
 						<div class="contacts__content__right">
-							<form class="contacts__form" action="">
+							<form class="contacts__form" action="ed.php"  method="post">
 								<div class="contacts__form__top">
 									<label>
 										Имя*
 										<br>
-										<input required="" type="text" id="name" placeholder="Иван">
-									</label>
+										<input required="" type="text" id="name" name="name" placeholder="Иван">
+									</label> 
 	
 									<label>
 										Email*
 										<br>
-										<input required="" type="email" id="mail" placeholder="Ваш email*">
+										<input required="" type="email" id="mail" name="email" placeholder="Ваш email*">
 									</label>
 								</div>
 	
@@ -768,7 +768,7 @@
 									Ваш комментарий*
 									<br>
 								</label>
-								<textarea required="" name="" id="comment" rows="5" placeholder="Сообщите нам любую дополнительную информацию"></textarea>
+								<textarea required="" id="comment" name="comment" rows="5" placeholder="Сообщите нам любую дополнительную информацию"></textarea>
 	
 								<div class="contacts__form__bottom">
 									<button class="contacts__form__button" action="submit">
@@ -821,7 +821,7 @@
 							<div class="footer-block">
 								<h3 class="footer-block-title">Наш сервис</h3>
 								<ul class="footer-block-content">
-									<li><a href="/aboutus.html">Контакты</a></li>
+									<li><a href="#">Контакты</a></li>
 									<li><a onclick="showDir()" href="#">Связаться с директором </a></li>
 									<li><a href="/shop_full.html">Каталог</a></li>
 								</ul>
