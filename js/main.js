@@ -871,7 +871,7 @@ function showDir() {
 	Swal.fire({
 		title: "Помогите нам развиваться быстрее. ",
 		html: `<h3 style="font-size:120%;">Задайте вопрос, поделитесь мнением о продукте и сервисе, расскажите, как улучшить сайт или работу специалистов. Все замечания и предложения важны, ведь благодаря вашему мнению мы становимся лучше.</h3>
-      <form class="order_form1" method="POST" action="send_email_to_retail.php">
+      <form class="order_form1" method="POST" action="php/send_email_to_retail.php">
       <div>
       <input autocomplete="off" name='name' class="inputq" placeholder="Введите ваше имя"/>
       </div>
@@ -913,7 +913,7 @@ function openItemModal(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="send_tovar_to_retail.php" method="post">
+		<form id="order_form" class="order_form" action="php/send_tovar_to_retail.php" method="post">
 		<input type="hidden" class="input" placeholder="Количество" id="col_item" name="colichestvo" value="">
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="color_item" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">

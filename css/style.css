@@ -18924,8 +18924,13 @@ span.star:before {
 	text-align: center;
 }
 
+.single-product-detail .single-product-info .e-quantity .tc i.fa-caret-down,
+.single-product-detail .single-product-info .e-quantity .tc i.fa-caret-up {
+	position: absolute;
+}
+
 .single-product-detail .single-product-info .e-quantity .tc {
-	top: 0;
+	top: 7px;
 	right: 0;
 	width: 20px;
 	position: absolute;
@@ -27881,9 +27886,7 @@ textarea {
 
 .contacts__form__button {
 	/* background: -webkit-gradient(linear, left top, right top, from(#fe8c00), to(#f83600)); */
-	background: linear-gradient(
-		122deg
-		, #c26af5, #54f0ff);
+	background: linear-gradient(122deg, #c26af5, #54f0ff);
 	font-weight: 600;
 	font-size: 15px;
 	line-height: 23px;
@@ -28087,14 +28090,17 @@ div[aria-describedby="swal2-content"] {
 	color: #fff;
 	font-size: 24px;
 }
+
 section.contacts {
 	margin-bottom: 25px;
 }
-.icon-mail,.icon-location {
+
+.icon-mail,
+.icon-location {
 	position: relative;
-padding-left: 20px;
+	padding-left: 20px;
 }
- 
+
 .icon-mail:before,
 .icon-location:before {
 	top: 2px;
