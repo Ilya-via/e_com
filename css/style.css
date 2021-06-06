@@ -11916,15 +11916,22 @@ span.star:before {
 	color: #fefefe;
 	border-radius: 50px;
 	display: inline-block;
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
+	padding-top: 5px;
+		width: 130px;
+	height: 40px;
+	line-height: 110%;
 	text-align: center;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 }
 
+@media (max-width: 520px) {
+	.slide-content .slide-btn .ion-ios-arrow-forward {
+		display: none;
+	}
+
+}
 @media (min-width: 520px) {
 	.slide-content .slide-btn {
 		font-size: 16px;
