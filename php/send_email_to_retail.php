@@ -52,7 +52,7 @@ email: ".$_POST['EMAIL']."
 Время заказа: ".date("Y-m-d H:i:s");
 
 if(mail($email, $title, $text)) {
-	header('Location: /test__e_com/index.html#footer');
+	header('Location: /');
 } else {
 	echo "Ошибка.";
 }

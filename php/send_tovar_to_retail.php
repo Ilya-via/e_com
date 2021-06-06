@@ -18,11 +18,10 @@ if($product == 'robot_1') {
     $product_price = 69.99;
     // $product_method = 'otsale';
 }
-// elseif($product == 'play-aqua') {
-//     $product_id = "kovriv_aqua";
-//     $product_price = 27.99;
-//     $product_method = 'shopping-cart';
-// }
+elseif($product == 'trimmer_1') {
+    $product_id = "garden_trimmer";
+    $product_price = 49.99;
+}
 // elseif($product == 'diode-tape') {
 //     $product_id = "led_lenta_blr";
 //     $product_price = 29.99;
@@ -109,7 +108,7 @@ $text = "
 Время заказа: ".date("Y-m-d H:i:s");
 
 if(mail($email, $title, $text)) {
-  header('Location: good.html');
+  header('Location: ./../good.html');
 } else {
   echo "Ошибка.";
 }
