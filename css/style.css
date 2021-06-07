@@ -28130,7 +28130,23 @@ section.contacts {
 #category-list_1 .btn-shopcate {
 	display: none;
 }
-
+.rating_container {
+	display: flex;
+	margin-left: 5px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.rating_number {
+	font-weight: 700;
+	line-height: 100%;
+	font-size: 14px;
+	color: #000;
+	margin-right: 7px;
+}
+.product-grid-v2 .product-rating .rating_container .number-rating {
+	margin: 0;
+}
 @media (max-width:768px) {
 	#review .review__item-text {
 		font-size: 16px;
