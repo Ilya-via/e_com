@@ -12793,14 +12793,14 @@ span.star:before {
 	}
 }
 
-.about-img img,
+/* .about-img img, */
 .banner-img2 img,
 .team-img img {
 	-webkit-transition: all 1s linear;
 	transition: all 1s linear;
 }
 
-.about-img img:hover,
+/* .about-img img:hover, */
 .banner-img2 img:hover,
 .team-img img:hover {
 	display: block;
