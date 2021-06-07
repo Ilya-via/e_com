@@ -11916,8 +11916,7 @@ span.star:before {
 	color: #fefefe;
 	border-radius: 50px;
 	display: inline-block;
-	padding-top: 5px;
-		width: 130px;
+	padding-top: 5px;	width: 130px;
 	height: 40px;
 	line-height: 110%;
 	text-align: center;
@@ -11932,12 +11931,14 @@ span.star:before {
 	}
 
 }
+
 @media (min-width: 520px) {
 	.slide-content .slide-btn {
 		font-size: 16px;
 		width: 200px;
 		height: 50px;
 		line-height: 50px;
+		padding-top: 0;
 	}
 }
 
@@ -28121,6 +28122,7 @@ section.contacts {
 .icon-mail:before {
 	background-image: url(../img/mail.svg);
 }
+
 .icon-location:before {
 	background-image: url(../img/geo.svg);
 }
