@@ -18,6 +18,22 @@ if($product == 'robot_1') {
     $product_price = 69.99;
     // $product_method = 'otsale';
 }
+elseif($product == 'avto_pilesos_1') {
+    $product_id = "avto_pilesos";
+    $product_price = 29.99;
+}
+elseif($product == 'smar_band_6_1') {
+    $product_id = "smar_band_6";
+    $product_price = 44.90;
+}
+elseif($product == 'airbuds_blr_1') {
+    $product_id = "airbuds_blr";
+    $product_price = 44.90;
+}
+elseif($product == 'apple_watch_1') {
+    $product_id = "apple_watch";
+    $product_price = 99.99;
+}
 elseif($product == 'trimmer_1') {
     $product_id = "garden_trimmer";
     $product_price = 49.99;
