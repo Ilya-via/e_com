@@ -87,7 +87,7 @@ jQuery(document).ready(function ($) {
 		});
 	});
 	// Open menu dropdown home 5
-	$(".js-menubar li .icon-sub-menu").on("click", function () {
+	$(".js-menubar li .icon-sub-menu, .js-menubar li a").on("click", function () {
 
 		$(this).toggleClass('up-icon');
 		$(this).parent().find(".js-open-menu").slideToggle('fast', function () {
