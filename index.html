@@ -489,14 +489,24 @@
 									<p class="cate">Легендарная колонка</p>
 									<h3>И СРАЗУ 3 ПОДАРКА</h3>
 									<p class="sale">Сегодня со скидкой <span class="red"><b>51%</b></span></p>
-									<a href="#" class="slide-btn e-pink-gradient" onclick="openItemModal(
+									<!-- <a href="#" class="slide-btn e-pink-gradient" onclick="openItemModal(
 										'braslet_id',
 										'Легендарная колонка + 3 ПОДАРКА',
 										'img/product/action_tov_1-2.png',
 										'200',
 										'99,90',
 										'true',
-								)">Заказать со скидкой<i class="ion-ios-arrow-forward"></i></a>
+								)">Заказать со скидкой<i class="ion-ios-arrow-forward"></i></a> -->
+									<a href="#" class="slide-btn e-pink-gradient" onclick="openItemModalSetFour(
+										'kolonka_3',
+										'air_pods_pro_1',
+										'golden_bank',
+										'apple_watch',
+										'Легендарная колонка + 3 ПОДАРКА',
+										'img/product/action_tov_1-2.png',
+										'200',
+										'99,90',
+										)">Заказать со скидкой<i class="ion-ios-arrow-forward"></i></a>
 								</div>
 							</div>
 
@@ -506,13 +516,14 @@
 									<p class="cate">Фитнес браслет M6</p>
 									<h3>+СРАЗУ 2 ПОДАРКА</h3>
 									<p class="sale">Сегодня со скидкой <span class="red"><b>49%</b></span></p>
-									<a href="#" class="slide-btn e-pink-gradient" onclick="openItemModal(
-										'braslet_id',
+									<a href="#" class="slide-btn e-pink-gradient" onclick="openItemModalSetThree(
+										'smar_band_6',
+										'airbuds_blr',
+										'golden_bank',
 										'Браслет для фитнеса Smart Band 6, Наушники беспроводные Airbuds, Павербанк 20800 mah MI',
 										'img/product/action_tov_1.png',
 										'243',
 										'119',
-										'true',
 								)">Заказать со скидкой<i class="ion-ios-arrow-forward"></i></a>
 								</div>
 							</div>
@@ -527,7 +538,7 @@
 									<div class="h-banner-content v4">
 										<p class="content-name">Робот Пылесос</p>
 										<p class="content-price">за <span class="red">99 BYN</span></p>
-										<a href="#" class="btn-banner" onclick="openItemModal(
+										<a href="#" class="btn-banner" onclick="openItemModalBanner(
 											'robot_1',
 											'Робот Пылесос',
 											'img/product/hit_tov_4.png',
@@ -544,14 +555,14 @@
 									<div class="h-banner-content v4">
 										<p class="content-name">Триммер для сада</p>
 										<p class="content-price">за <span class="red">44,99 BYN</span></p>
-										<a href="#" class="btn-banner" onclick="openItemModal(
+										<a href="#" class="btn-banner" onclick="openItemModalBanner(
 											'trimmer_1',
 											'Беспроводной садовый триммер',
 											'img/product/nov_tov_5.png',
 											'98',
 											'49,99',
 											'true',
-									),getInputValue()">Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
+									)">Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
 									</div>
 								</div>
 							</div>
@@ -611,7 +622,17 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_1.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetThree(
+										'smar_band_6',
+										'airbuds_blr',
+										'golden_bank',
+										'Браслет для фитнеса Smart Band 6, Наушники беспроводные Airbuds, Павербанк 20800 mah MI',
+										'img/product/action_tov_1.png',
+										'243',
+										'119',
+								)"
+												><img src="img/product/action_tov_1.png" alt="" class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
 										<div class="color-group">
@@ -654,7 +675,8 @@
 
 											</div>
 											<p class="product-cate">Комплект "Современный"</p>
-											<h3 class="product-title"><a href="#">Браслет для фитнеса Smart Band 6, Наушники беспроводные
+											<h3 class="product-title"><a href="#"
+												>Браслет для фитнеса Smart Band 6, Наушники беспроводные
 													Airbuds, Павербанк 20800 mah MI</a></h3>
 											<div class="product-bottom">
 												<div class="product-price"><span>119 BYN</span></div>
@@ -669,7 +691,16 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_2.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetTwo(
+										'apple_watch',
+										'airbuds_blr',
+										'Smart-часы V6 + Наушники беспроводные Airbuds',
+										'img/product/action_tov_2.png',
+										'195',
+										'99',
+										)"
+										><img src="img/product/action_tov_2.png" alt="" class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
 										<div class="color-group"></div>
@@ -725,7 +756,17 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_3.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetThree(
+										'odeyalo_2_pillows',
+										'nochnik_nebo',
+										'pillow_grecha',
+										'Одеяло и 2 подушки, Ночник	звёздное небо, Подушка с наполнителем (гречка)',
+										'img/product/action_tov_3.png',
+										'254.99',
+										'129.99',
+								)"
+										><img src="img/product/action_tov_3.png" alt="" class="img-reponsive"></a>
 										<div class="ribbon-price red"><span>- 51% </span></div>
 									</div>
 									<div class="product-info">
@@ -787,7 +828,17 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_4.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetThree(
+											'freinberger',
+											'korzina',
+											'podstavki',
+											'Швабра с распылителем, Корзина для белья, Подставки антивибрационные',
+											'img/product/action_tov_4.png',
+											'190',
+											'99.99',
+									)"
+										><img src="img/product/action_tov_4.png" alt="" class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
 										<div class="color-group">
@@ -845,7 +896,17 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_5.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetThree(
+											'avto_pilesos',
+											'renumax_neo',
+											'night_vision',
+											'Автомобильный пылесос, Средство для удаления царапин -	Renumax Neo + антибликовы очки подарок',
+											'img/product/action_tov_5.png',
+											'175',
+											'89.99',
+									)"
+										><img src="img/product/action_tov_5.png" alt="" class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
 										<div class="color-group">
@@ -903,7 +964,16 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="#"><img src="img/product/action_tov_6.png" alt="" class="img-reponsive"></a>
+										<a href="#"
+										onclick="openItemModalSetTwo(
+											'derjatel',
+											'night_vision',
+											'Держатель автомобильный Smart Sensor R1 + антибликовые очки в подарок',
+											'img/product/action_tov_6.png',
+											'117.6',
+											'59.99',
+									)"
+										><img src="img/product/action_tov_6.png" alt="" class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
 										<div class="color-group">
@@ -961,7 +1031,16 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="/product_trimer_sad.html"><img src="img/product/action_tov_7.png" alt=""
+										<a href="#"
+										onclick="openItemModalSetTwo(
+											'garden_trimmer',
+											'perhi_kogti',
+											'Триммер для сада + перчатки в подарок',
+											'img/product/action_tov_7.png',
+											'98.00',
+											'49.99',
+									)"
+										><img src="img/product/action_tov_7.png" alt=""
 												class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
@@ -1005,7 +1084,7 @@
 
 											</div>
 											<!-- <p class="product-cate">Комплект "Для сада"</p> -->
-											<h3 class="product-title"><a href="/product_trimer_sad.html">Триммер для сада + перчатки в
+											<h3 class="product-title"><a href="#">Триммер для сада + перчатки в
 													подарок</a></h3>
 											<div class="product-bottom">
 												<div class="product-price"><span>49,99 BYN</span></div>
@@ -1020,7 +1099,16 @@
 							<div class="product-item">
 								<div class="pd-bd product-inner">
 									<div class="product-img">
-										<a href="/product_сultivator.html"><img src="img/product/action_tov_8.png" alt=""
+										<a href="#"
+										onclick="openItemModalSetTwo(
+											'tornadika_blr',
+											'perhi_kogti',
+											'Культиватор Торнадо + перчатки в подарок',
+											'img/product/action_tov_8.png',
+											'156.80',
+											'79.99',
+									)"
+										><img src="img/product/action_tov_8.png" alt=""
 												class="img-reponsive"></a>
 									</div>
 									<div class="product-info">
@@ -1064,7 +1152,7 @@
 
 											</div>
 											<!-- <p class="product-cate">Комплект "Торнадо"</p> -->
-											<h3 class="product-title"><a href="/product_сultivator.html">Культиватор "Торнадо" + перчатки в
+											<h3 class="product-title"><a href="#">Культиватор "Торнадо" + перчатки в
 													подарок</a></h3>
 											<div class="product-bottom">
 												<div class="product-price"><span>79,99 BYN</span></div>
@@ -3459,7 +3547,15 @@
 								<p class="h-banner-content__sub-title">Только сегодня!</p>
 								<p class="content-name">Smart-часы V6 + powerbank</p>
 								<p class="content-price">Всего за <span class="red">119,99</span></p>
-								<a href="#" class="btn-banner">Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
+								<a href="#" class="btn-banner"
+								onclick="openItemModalSetTwo(
+										'apple_watch',
+										'golden_bank',
+										'Smart-часы V6 + powerbank',
+										'img/banner/banner-content__1_1.png',
+										'200',
+										'119,99',
+										)">Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
 							</div>
 						</div>
 					</div>
@@ -3470,7 +3566,16 @@
 								<p class="h-banner-content__sub-title">Только сегодня!</p>
 								<p class="content-name">Наушники Air PRO + powerbank</p>
 								<p class="content-price">Всего за <span class="red">119,99</span></p>
-								<a href="#" class="btn-banner">Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
+								<a href="#" class="btn-banner"
+								onclick="openItemModalSetTwo(
+									'airbuds_blr',
+									'golden_bank',
+									'Наушники Air PRO + powerbank',
+									'img/banner/banner-content__2_1.png',
+									'200',
+									'119,99',
+									)"
+								>Купить со скидкой<i class="ion-ios-arrow-forward"></i></a>
 							</div>
 						</div>
 					</div>

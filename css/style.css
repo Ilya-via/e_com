@@ -95,7 +95,7 @@ li,
 p {
 	font-feature-settings: "pnum"on, "lnum"on;
 }
-a[href^='#'] {
+a[href^='#']:not(.btn-banner):not(.slide-btn):not(#product-tab_1 .product-img a) {
 	cursor: default;
 }
 body {

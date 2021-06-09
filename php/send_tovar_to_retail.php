@@ -15,7 +15,7 @@ $col=$_POST['colichestvo'];
 
 if($product == 'robot_1') {
     $product_id = "clean_robot"; // робот
-    $product_price = 69.99;
+    $product_price = 99.99;
     // $product_method = 'otsale';
 }
 elseif($product == 'avto_pilesos_1') {
@@ -296,8 +296,8 @@ $title = "Заявка с сайта luuk.by";
 $text = "
 Информация о покупателе:
 
-Имя: ".$_POST['name']."
-Телефон: ".$_POST['phone']."
+Имя: ".$_POST['order_form_name']."
+Телефон: ".$_POST['order_form_phone']."
 Время заказа: ".date("Y-m-d H:i:s");
 
 if(mail($email, $title, $text)) {
