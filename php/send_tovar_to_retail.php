@@ -251,12 +251,11 @@ $postData = http_build_query(array(
     'order' => json_encode(array(
         'firstName' => $name,
         'phone' => $phone,
-        // 'orderMethod' => $product_method,
+        'orderMethod' => 'zaiavka-s-saita-luuk-by',
 				'status' => 'new',
-        'managerComment' => "Заявка с нового сайта luuk.by",
+        'managerComment' => "Заявка с сайта luuk.by",
 				'customFields' => array(
-					'type_sales' => 3,
-					
+					'type_sale' => 1,
 			),
 			
         'items' => array(
@@ -292,7 +291,7 @@ $result = json_decode(
 );
 
 $email = "vrassrochky.by@gmail.com"; 
-$title = "Заявка с нового сайта luuk.by";
+$title = "Заявка с сайта luuk.by";
 
 $text = "
 Информация о покупателе:

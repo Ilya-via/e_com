@@ -95,7 +95,9 @@ li,
 p {
 	font-feature-settings: "pnum"on, "lnum"on;
 }
-
+a[href^='#'] {
+	cursor: default;
+}
 body {
 	margin: 0;
 }
