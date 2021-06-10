@@ -32,11 +32,11 @@ $postData = http_build_query(array(
     'order' => json_encode(array(
         'firstName' => $name,
         'phone' => $phone,
-        'orderMethod' => 'zaiavka-s-saita-luuk-by',
+				'orderMethod' => 'phone',
 				'status' => 'new',
         'managerComment' => "Заявка с сайта luuk.by",
 				'customFields' => array(
-					'type_sale' => 1,
+					'type_sales' => 6,
 			),
 			
         'items' => array(
