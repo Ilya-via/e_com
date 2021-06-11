@@ -96,10 +96,12 @@ p {
 	font-feature-settings: "pnum"on, "lnum"on;
 }
 
-a[href^='#']:not(.btn-banner):not(.slide-btn):not(#product-tab_1 .product-img a):not(.bestseller2 .product-tab-sw2 li a) {
+a[href^='#']:not(.btn-banner):not(.slide-btn):not(#product-tab_1 .product-img a):not(.bestseller2 .product-tab-sw2 li a):not(.e-btn.cart-qtt.btn-gradient a) {
 	cursor: default;
 }
-
+.e-btn.cart-qtt.btn-gradient {
+	cursor: pointer;
+}
 body {
 	margin: 0;
 }
