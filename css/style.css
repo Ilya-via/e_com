@@ -14128,11 +14128,22 @@ span.star:before {
 }
 
 .product-grid-v2 .product-rating .number-rating {
+	display: flex;
+	align-items: center;
 	color: #999;
-	font-size: 12px;
-	margin-left: 10px;
+	font-size: 14px;
+	line-height: 100%;
 }
-
+.rating_number_icon {
+	display: block;
+	width: 25px;
+	height: 23px;
+	opacity: 0.6;
+	background: url(../img/eye.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
 .product-grid-v2 .desc-list {
 	display: block;
 }
@@ -28210,11 +28221,11 @@ section.contacts {
 	line-height: 100%;
 	font-size: 14px;
 	color: #000;
-	margin-right: 7px;
+	/* margin-right: 7px; */
 }
 
 .product-grid-v2 .product-rating .rating_container .number-rating {
-	margin: 0;
+	margin: 0 0 0 10px;
 }
 
 .mobile_phone {

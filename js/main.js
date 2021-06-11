@@ -856,11 +856,12 @@ $(document).ready(function () {
 });
 
 // Скрыть блок при клике вне его.
-jQuery(function($){
-	$(document).mouseup(function (e){ // событие клика по веб-документу
+jQuery(function ($) {
+	$(document).mouseup(function (e) { // событие клика по веб-документу
 		var div = $(".vertical-wrapper"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
-		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+			&&
+			div.has(e.target).length === 0) { // и не по его дочерним элементам
 			div.hide(); // скрываем его
 			// $('.navbar-toggles.navbar-drop.js-vertical-menu').removeClass('active');
 		}
@@ -897,7 +898,7 @@ function openItemModal(
 	price_old,
 	price_new,
 	special,
-	) {
+) {
 
 
 	Swal.fire({
@@ -929,7 +930,7 @@ function openItemModal(
 
 }
 
-function getInputValue(){
+function getInputValue() {
 	Number($('#col_item').val(`${$('.e-quantity input').val()}`));
 }
 
@@ -941,7 +942,7 @@ function openItemModalBanner(
 	price_old,
 	price_new,
 	special,
-	) {
+) {
 
 
 	Swal.fire({
@@ -971,6 +972,7 @@ function openItemModalBanner(
     `,
 	});
 }
+
 function openItemModalSetTwo(
 	id,
 	id_1,
@@ -978,7 +980,7 @@ function openItemModalSetTwo(
 	img,
 	price_old,
 	price_new,
-		) {
+) {
 
 
 	Swal.fire({
@@ -1011,6 +1013,7 @@ function openItemModalSetTwo(
 	});
 
 }
+
 function openItemModalSetThree(
 	id,
 	id_1,
@@ -1019,7 +1022,7 @@ function openItemModalSetThree(
 	img,
 	price_old,
 	price_new,
-		) {
+) {
 
 
 	Swal.fire({
@@ -1052,6 +1055,7 @@ function openItemModalSetThree(
 	});
 
 }
+
 function openItemModalSetFour(
 	id,
 	id_1,
@@ -1061,7 +1065,7 @@ function openItemModalSetFour(
 	img,
 	price_old,
 	price_new,
-		) {
+) {
 
 
 	Swal.fire({
