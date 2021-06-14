@@ -99,9 +99,11 @@ p {
 a[href^='#']:not(.btn-banner):not(.slide-btn):not(#product-tab_1 .product-img a):not(.bestseller2 .product-tab-sw2 li a):not(.e-btn.cart-qtt.btn-gradient a) {
 	cursor: default;
 }
+
 .e-btn.cart-qtt.btn-gradient {
 	cursor: pointer;
 }
+
 body {
 	margin: 0;
 }
@@ -14134,6 +14136,7 @@ span.star:before {
 	font-size: 14px;
 	line-height: 100%;
 }
+
 .rating_number_icon {
 	display: block;
 	width: 25px;
@@ -14144,6 +14147,7 @@ span.star:before {
 	background-position: center center;
 	background-size: contain;
 }
+
 .product-grid-v2 .desc-list {
 	display: block;
 }
@@ -24044,7 +24048,8 @@ span.star:before {
 }
 
 .vertical-menu .vertical-menu1 li>a {
-	color: #666;
+	/* color: #666; */
+	color: rgb(20, 20, 20);
 	line-height: 125%;
 }
 
@@ -28240,6 +28245,51 @@ section.contacts {
 	display: block;
 	font-size: 24px;
 	font-weight: 300;
+}
+
+/* Header vertical-menu desctop background */
+#desctop_vertical-menu_1 {
+	background: url(../img/header/desktop_header_bg_1.png);
+}
+#desctop_vertical-menu_2 {
+	background: url(../img/header/desktop_header_bg_2.png);
+}
+#desctop_vertical-menu_3 {
+	background: url(../img/header/desktop_header_bg_3.png);
+}
+#desctop_vertical-menu_4 {
+	background: url(../img/header/desktop_header_bg_4.png);
+}
+#desctop_vertical-menu_5 {
+	background: url(../img/header/desktop_header_bg_5.png);
+}
+#desctop_vertical-menu_6 {
+	background: url(../img/header/desktop_header_bg_6.png);
+}
+#desctop_vertical-menu_7 {
+	background: url(../img/header/desktop_header_bg_7.png);
+}
+#desctop_vertical-menu_8 {
+	background: url(../img/header/desktop_header_bg_8.png);
+}
+#desctop_vertical-menu_9 {
+	background: url(../img/header/desktop_header_bg_9.png);
+}
+
+#desctop_vertical-menu_1,
+#desctop_vertical-menu_2,
+#desctop_vertical-menu_3,
+#desctop_vertical-menu_4,
+#desctop_vertical-menu_5,
+#desctop_vertical-menu_6,
+#desctop_vertical-menu_7,
+#desctop_vertical-menu_8,
+#desctop_vertical-menu_9 {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #ffffff;
+	color: black;
 }
 
 .footer__requisites {
