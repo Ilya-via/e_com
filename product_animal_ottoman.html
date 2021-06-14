@@ -238,11 +238,11 @@
 						</div>
 						<div class="mobile_phone"><a href="tel:+375298853816">+375 (29) 885-38-16</a></div>
 						<div class="col-lg-7 col-md-7 v-center header-search hidden-xs hidden-sm">
-							<form method="get" class="searchform ajax-search" action="/search" role="search">
+
+							<form method="get" class="searchform ajax-search" action="" role="search">
 								<input type="hidden" name="type" value="product">
-								<input type="text" onblur="if (this.value=='') this.value = this.defaultValue"
-									onfocus="if (this.value==this.defaultValue) this.value = ''" name="q" class="form-control"
-									placeholder="покупаю для...">
+								<input type="text" name="qq" class="form-control" placeholder="покупаю для...">
+
 								<ul class="list-product-search hidden-xs hidden-sm">
 									<li>
 										<a class="flex align-center" href="/product_robot.html">
@@ -253,7 +253,8 @@
 										</a>
 									</li>
 								</ul>
-								<div class="search-panel">
+
+								<!-- <div class="search-panel">
 									<a class="dropdown-toggle" data-toggle="dropdown" href='#'>Категории <span
 											class="fa fa-caret-down"></span></a>
 									<ul id="category" class="dropdown-menu dropdown-category">
@@ -267,11 +268,12 @@
 										<li><a href="#">Кухня</a></li>
 										<li><a href="#">Для животных</a></li>
 									</ul>
-								</div>
-								<span class="input-group-btn">
+								</div> -->
+								<!-- <span class="input-group-btn">
 									<button class="button_search" type="button"><i class="ion-ios-search-strong"></i></button>
-								</span>
+								</span> -->
 							</form>
+
 							<div class="tags">
 								<span>Самые популярные в поиске:</span>
 								<a href="/product_robot.html">робот пылесос</a>
@@ -312,7 +314,7 @@
 								<ul class="vertical-group">
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Техника</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_1">
 											<ul class="vertical-menu1">
 												<li><a href="/product_smart_w6.html">Smart-часы V6</a></li>
 												<li><a href="/product_airbuds.html">Наушники беспроводные Airbuds</a></li>
@@ -324,7 +326,7 @@
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Дом<span
 												class="h-ribbon e-red mg-l10">Hot</span></a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_2">
 											<ul class="vertical-menu1">
 												<li><a href="/product_gamak_mexico.html">Гамак Мексиканский</a></li>
 												<li><a href="/product_robot.html">Робот пылесос</a></li>
@@ -342,7 +344,7 @@
 									</li>
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Автомобиль</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_3">
 											<ul class="vertical-menu1">
 												<li><a href="/product_avto_sos.html">Автомобильный пылесос</a></li>
 												<li><a href="/product_scratch_remedy.html">Средство для удаления царапин</a></li>
@@ -353,7 +355,7 @@
 										</div>
 									</li>
 									<li class="vertical-item level1 vertical-drop"><a href="#">Дача и огород</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_4">
 											<ul class="vertical-menu1">
 												<li><a href="/product_trimer_sad.html">Беспроводной садовый триммер</a></li>
 												<li><a href="/product_parnik_exp.html">Парники эксперт</a></li>
@@ -365,7 +367,7 @@
 									</li>
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Дети</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_5">
 											<ul class="vertical-menu1">
 												<li><a href="/product_dozator.html">Дозатор для зубной пасты</a></li>
 												<li><a href="/product_roller.html">Флеш-роллеры + светящиеся шнурки</a></li>
@@ -376,7 +378,7 @@
 									</li>
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Красота</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_6">
 											<ul class="vertical-menu1">
 												<li><a href="/product_magnit_res.html">Магнитные ресницы</a></li>
 												<li><a href="/product_mask_black_head.html">Маска от черных точек Black Head</a></li>
@@ -399,7 +401,7 @@
 
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Здоровье</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_7">
 											<ul class="vertical-menu1">
 												<li><a href="/product_massage_gun.html">Массажер терапевтический Пистолет</a></li>
 												<li><a href="/product_corrector_magnetic.html">Корректор осанки магнитный</a></li>
@@ -411,7 +413,7 @@
 									</li>
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Кухня</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_8">
 											<ul class="vertical-menu1">
 												<li><a href="/product_set_of_pots.html">Набор кастрюль</a></li>
 												<li><a href="/product_vegetable_cutter.html">Тёрка овощерезка с контейнером</a></li>
@@ -425,7 +427,7 @@
 									</li>
 
 									<li class="vertical-item level1 vertical-drop"><a href="#">Для животных</a>
-										<div class="menu-level-1 dropdown-menu vertical-menu">
+										<div class="menu-level-1 dropdown-menu vertical-menu" id="desctop_vertical-menu_9">
 											<ul class="vertical-menu1">
 												<li><a href="/product_automatic_animal_feeder.html">Кормушка для животных автоматическая</a>
 												</li>
