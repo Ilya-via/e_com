@@ -28246,7 +28246,7 @@ section.contacts {
 }
 
 /* Header vertical-menu desctop background */
-#desctop_vertical-menu_1 {
+/* #desctop_vertical-menu_1 {
 	background: url(../img/header/desktop_header_bg_1.png);
 }
 
@@ -28297,7 +28297,7 @@ section.contacts {
 	background-color: #ffffff;
 	color: black;
 	border: 0;
-}
+} */
 
 .footer__requisites {
 	display: flex;
