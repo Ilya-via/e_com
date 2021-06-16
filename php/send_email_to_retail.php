@@ -2,21 +2,37 @@
 
 header("Content-Type: text/html; charset=utf-8");
 
-$email = $_POST['email_footer'];
+// $email = $_POST['email_footer'];
+$email = $_POST['EMAIL'];
 $country_id = 'BY';
 
 $RETAIL_URL = 'https://instagram234.retailcrm.ru';
 $RETAIL_API_KEY = 'ivLKeYDHvgQTt0KSqwovmfw4dWy63gO4'; 
 
 
+// $postData = http_build_query(array(
+//     'customer' => json_encode(array(
+// 			'email' => $email,
+// 			'externalId'=> 'sdd33',
+//     )),
+// 		'site' => 'www-instagram-com-luuk-by',
+//     'apiKey' => $RETAIL_API_KEY,
+// ));
+
 $postData = http_build_query(array(
-    'customer' => json_encode(array(
-			'email' => $email,
-			'externalId'=> 'sdd33',
-    )),
-		'site' => 'www-instagram-com-luuk-by',
-    'apiKey' => $RETAIL_API_KEY,
+	'order' => json_encode(array(
+		'phone' => $email,
+		'status' => 'new',
+		'orderMethod' => 'zaiavka-s-saita-luuk-by',
+		'customFields' => array(
+					'type_sales' => 1,
+	),
+			'managerComment' => 'форма email подписки с сайта luuk.by',
+	)),
+	'site' => 'www-instagram-com-luuk-by',
+	'apiKey' => $RETAIL_API_KEY,
 ));
+
 
 $opts = array('http' =>
     array(
@@ -29,7 +45,8 @@ $opts = array('http' =>
 $context  = stream_context_create($opts);
 $result = json_decode(
     file_get_contents(
-        $RETAIL_URL . '/api/v4/customers/create', 
+        // $RETAIL_URL . '/api/v4/customers/create', 
+				$RETAIL_URL . '/api/v4/orders/create', 
         false, 
         $context
     ),
@@ -53,13 +70,13 @@ mail($email, $title, $text);
 
 
 <!-- Переадресация на главную страницу сайта, через 3 секунды -->
-<!-- <script language="JavaScript" type="text/javascript">
+<script language="JavaScript" type="text/javascript">
 	function changeurl() {
 		eval(self.location = "/#footer");
 	}
 	window.setTimeout("changeurl();", 2500);
 	
-</script> -->
+</script>
 
 
 <!DOCTYPE html>

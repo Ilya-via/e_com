@@ -23772,9 +23772,9 @@ span.star:before {
 	transition: background-color .2s ease-in-out, transform .2s ease-in-out, width .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-/* #header form.searchform {
+#header form.searchform {
 	display: none !important;
-} */
+}
 
 #header .header-search,
 #header .header-search .tags {
