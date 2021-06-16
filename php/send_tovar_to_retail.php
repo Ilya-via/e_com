@@ -15,7 +15,7 @@ $col=$_POST['colichestvo'];
 
 if($product == 'robot_1') {
     $product_id = "clean_robot"; // робот
-    $product_price = 99.99;
+    $product_price = 200;
     // $product_method = 'otsale';
 }
 elseif($product == 'avto_pilesos_1') {

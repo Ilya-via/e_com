@@ -2,9 +2,7 @@
 
 header("Content-Type: text/html; charset=utf-8");
 
-$email = $_POST['EMAIL'];
-// $phone = $_POST['phone'];
-// $price = '0';
+$email = $_POST['email_footer'];
 $country_id = 'BY';
 
 $RETAIL_URL = 'https://instagram234.retailcrm.ru';
@@ -12,16 +10,11 @@ $RETAIL_API_KEY = 'ivLKeYDHvgQTt0KSqwovmfw4dWy63gO4';
 
 
 $postData = http_build_query(array(
-    'order' => json_encode(array(
-        'phone' => $email,
-        'status' => 'new-chern',
-				'orderMethod' => 'phone',
-			  'customFields' => array(
-            'type_sales' => 6,
-),
-        // 'managerComment' => 'СДЕЛКУ ПОКАЖИТЕ МАКСИМУ, она с главного сайта',
+    'customer' => json_encode(array(
+			'email' => $email,
+			'externalId'=> 'sdd33',
     )),
-			// 	'OrderMethod' => 'phone',
+		'site' => 'www-instagram-com-luuk-by',
     'apiKey' => $RETAIL_API_KEY,
 ));
 
@@ -36,7 +29,7 @@ $opts = array('http' =>
 $context  = stream_context_create($opts);
 $result = json_decode(
     file_get_contents(
-        $RETAIL_URL . '/api/v4/orders/create', 
+        $RETAIL_URL . '/api/v4/customers/create', 
         false, 
         $context
     ),
@@ -48,25 +41,25 @@ $title = "Форма в footer на новом сайте";
 
 $text = "
 Информация о покупателе:
-email: ".$_POST['EMAIL']."
+email: ".$_POST['email_footer']."
 Время заказа: ".date("Y-m-d H:i:s");
-
-if(mail($email, $title, $text)) {
-	header('Location: /');
-} else {
-	echo "Ошибка.";
-}
-?>
+mail($email, $title, $text);
+// if(mail($email, $title, $text)) {
+// 	header('Location: /');
+// } else {
+// 	echo "Ошибка.";
+// }
+ ?>
 
 
 <!-- Переадресация на главную страницу сайта, через 3 секунды -->
-<script language="JavaScript" type="text/javascript">
+<!-- <script language="JavaScript" type="text/javascript">
 	function changeurl() {
 		eval(self.location = "/#footer");
 	}
 	window.setTimeout("changeurl();", 2500);
 	
-</script>
+</script> -->
 
 
 <!DOCTYPE html>

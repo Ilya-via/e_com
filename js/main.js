@@ -868,6 +868,110 @@ jQuery(function ($) {
 	});
 });
 
+// Логика поиска товара
+// $(document).on("touchstart", button, function () {
+// 	$(button).addClass(holdClass);
+// });
+// $(document).on("touchend touchcancel touchleave", button, function () {
+// 	$(button).removeClass(holdClass);
+// });
+
+let tovarObj = [
+	robot_sos = {
+		title: 'Робот Пылесос',
+		link: '/product_robot.html',
+		img_link: 'img/product/hit_tov_4.png',
+	},
+	smart_watch_v6 = {
+		title: 'Smart-часы V6',
+		link: '/product_smart_w6.html',
+		img_link: 'img/product/hit_tov_1.png',
+	},
+	disco_ball = {
+		title: 'Диско шар',
+		link: '/product_disco_ball.html',
+		img_link: 'img/product/tovar_127.png',
+	},
+]
+let findArray = [];
+$(document).on("keyup", '#tov_name_header', function () {
+	// $(this).val()
+	tovarObj.forEach(
+		function (item, index) {
+			// console.log(item);
+			if ($('#tov_name_header').val().toLowerCase().trim().replace(/-/g, ' ') == item.title.toLowerCase().trim().replace(/-/g, ' ')) {
+				findArray.push(item);
+			}
+			// console.log(item.title.toLowerCase().trim().replace(/-/g, ' '));
+			// let stringValue = $(this);
+			// if (stringValue.includes('|')) {
+			// 	stringValue = stringValue.split('|')[0].trim();
+			// }
+			// findArray.push(stringValue);
+		});
+	// console.log(findArray);
+});
+
+
+// tovarObj.forEach(
+// 	function () {
+// 		let stringValue = $(this).text().toLowerCase();
+// 		if (stringValue.includes('|')) {
+// 			stringValue = stringValue.split('|')[0].trim();
+// 		}
+// 		findArray.push(stringValue);
+// 	});
+
+// function pushTovar() {
+// 	$("#regTitle").html("Hello World");
+// }
+
+// function findTovar() {
+// 	if (!($('#tov_name_header').val() == '' || $('#tov_name_header').val() ==
+// 			null || $('#tov_name_header').val() == undefined)) {
+
+// 		if (findArray.includes($('#tov_name_header').val().trim().toLowerCase())) {
+// 			// $("#regTitle").html("Hello World");
+// 			$('.find__pop-up-image').addClass('find__pop-up-image--true');
+// 			$('.find__pop-up').fadeTo(300, 1, "linear");
+// 			// popUpText('Город есть в списке.');
+// 			// setTimeout(animatedHide, 3000);
+// 		} else {
+// 			$('.find__pop-up-image').addClass('find__pop-up-image--false');
+// 			$('.find__pop-up').fadeTo(300, 1, "linear");
+// 			// popUpText('Город не внесён в список.');
+// 			// setTimeout(animatedHide, 3000);
+// 		}
+// 	}
+// }
+
+// Enter
+// $(".tov_name_header").on("keyup", function (event) {
+// 	if (event.keyCode === 13) {
+// 		event.preventDefault();
+// 		findTovar();
+// 	}
+// });
+
+
+// $(".city_links__find_button").on("click", function (e) {
+// 	findTovar();
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function showDir() {
 	Swal.fire({
 		title: "Помогите нам развиваться быстрее. ",

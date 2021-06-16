@@ -22154,18 +22154,17 @@ span.star:before {
 }
 
 .header-search form {
-	display: table;
+	display: flex;
 	position: relative;
 }
 
 .header-search input {
-	height: 62px;
-	border-radius: 31px 0 0 31px;
-	border: 2px solid #eaeaea;
-	padding-left: 34px;
-	width: 300px;
-	display: table-cell;
-	border-right: 0;
+	height: 45px;
+	border-radius: 30px;
+	border: 1px solid #eaeaea;
+	padding-left: 25px;
+	max-width: 480px;
+	margin: 15px auto;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -22194,7 +22193,7 @@ span.star:before {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-
+/* 
 @media (min-width: 1200px) {
 	.header-search input {
 		width: 400px;
@@ -22223,7 +22222,7 @@ span.star:before {
 	.header-search input {
 		width: 540px;
 	}
-}
+} */
 
 .header-search .select-option {
 	width: 220px;
@@ -22444,7 +22443,6 @@ span.star:before {
 	padding-top: 25px;
 	font-size: 12px;
 	text-align: center;
-	margin-left: 55px;
 }
 
 .tags span {
@@ -23774,9 +23772,9 @@ span.star:before {
 	transition: background-color .2s ease-in-out, transform .2s ease-in-out, width .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-#header form.searchform {
+/* #header form.searchform {
 	display: none !important;
-}
+} */
 
 #header .header-search,
 #header .header-search .tags {
@@ -28251,27 +28249,35 @@ section.contacts {
 #desctop_vertical-menu_1 {
 	background: url(../img/header/desktop_header_bg_1.png);
 }
+
 #desctop_vertical-menu_2 {
 	background: url(../img/header/desktop_header_bg_2.png);
 }
+
 #desctop_vertical-menu_3 {
 	background: url(../img/header/desktop_header_bg_3.png);
 }
+
 #desctop_vertical-menu_4 {
 	background: url(../img/header/desktop_header_bg_4.png);
 }
+
 #desctop_vertical-menu_5 {
 	background: url(../img/header/desktop_header_bg_5.png);
 }
+
 #desctop_vertical-menu_6 {
 	background: url(../img/header/desktop_header_bg_6.png);
 }
+
 #desctop_vertical-menu_7 {
 	background: url(../img/header/desktop_header_bg_7.png);
 }
+
 #desctop_vertical-menu_8 {
 	background: url(../img/header/desktop_header_bg_8.png);
 }
+
 #desctop_vertical-menu_9 {
 	background: url(../img/header/desktop_header_bg_9.png);
 }
@@ -28290,6 +28296,7 @@ section.contacts {
 	background-size: cover;
 	background-color: #ffffff;
 	color: black;
+	border: 0;
 }
 
 .footer__requisites {
