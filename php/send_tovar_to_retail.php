@@ -36,7 +36,7 @@ elseif($product == 'apple_watch_1') {
 }
 elseif($product == 'trimmer_1') {
     $product_id = "garden_trimmer";
-    $product_price = 49.99;
+    $product_price = 74.99;
 }
 elseif($product == 'air_pods') {
     $product_id = "air_pods_pro_1";

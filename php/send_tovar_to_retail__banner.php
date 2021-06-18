@@ -15,11 +15,11 @@ $col=1;
 
 if($product == 'robot_1') {
     $product_id = "clean_robot";
-		$product_price = 200;
+		$product_price = 350;
 }
 elseif($product == 'trimmer_1') {
 	$product_id = "garden_trimmer";
-	$product_price = 49.99;
+	$product_price = 74.99;
 }
 
 
