@@ -15,7 +15,7 @@ $col=$_POST['colichestvo'];
 
 if($product == 'robot_1') {
     $product_id = "clean_robot"; // робот
-    $product_price = 200;
+    $product_price = 350;
     // $product_method = 'otsale';
 }
 elseif($product == 'avto_pilesos_1') {
@@ -32,7 +32,7 @@ elseif($product == 'airbuds_blr_1') {
 }
 elseif($product == 'apple_watch_1') {
     $product_id = "apple_watch";
-    $product_price = 99.99;
+    $product_price = 250;
 }
 elseif($product == 'trimmer_1') {
     $product_id = "garden_trimmer";
@@ -40,7 +40,7 @@ elseif($product == 'trimmer_1') {
 }
 elseif($product == 'air_pods') {
     $product_id = "air_pods_pro_1";
-    $product_price = 99;
+    $product_price = 190;
 }
 elseif($product == 'gamak_mexico') {
     $product_id = "gamak";
