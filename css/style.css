@@ -23988,7 +23988,7 @@ span.star:before {
 	border: 1px solid #ebebeb;
 	z-index: 9;
 	height: 469px;
-	min-width: 400px;
+	min-width: 700px;
 	border-radius: 10px;
 	color: #333;
 	padding: 30px;
@@ -28246,7 +28246,7 @@ section.contacts {
 }
 
 /* Header vertical-menu desctop background */
-/* #desctop_vertical-menu_1 {
+#desctop_vertical-menu_1 {
 	background: url(../img/header/desktop_header_bg_1.png);
 }
 
@@ -28291,13 +28291,13 @@ section.contacts {
 #desctop_vertical-menu_7,
 #desctop_vertical-menu_8,
 #desctop_vertical-menu_9 {
-	background-position: center center;
+	background-position: center right;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-color: #ffffff;
 	color: black;
 	border: 0;
-} */
+}
 
 .footer__requisites {
 	display: flex;
