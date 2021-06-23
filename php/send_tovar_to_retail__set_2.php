@@ -10,7 +10,10 @@ $crmKey = 'zmb0tit05anQvNRrBgj1MvJpA1sEAgsE';
 $product_id = $_POST['product'];
 $product_2_id= $_POST['product_1'];
 $product_price= $_POST['popup_price'];
-
+$comment_1;
+if ($product_id == 'clean_robot' && $product_2_id == 'podarok_k_sety') {
+	$comment_1 = "Давать товар в подарок, на выбор: фен Моузер Cromoser ИЛИ триммер СтаблБерд \nВнешний код: \nmouzer_fen_blr \nstabl_bird_blr";
+}
 
 $postData = http_build_query(array(
     'order' => json_encode(array(
@@ -18,7 +21,7 @@ $postData = http_build_query(array(
         'phone' => $phone,
 				'orderMethod' => 'zaiavka-s-saita-luuk-by',
 				'status' => 'new',
-        'managerComment' => "Заявка с сайта luuk.by",
+        'managerComment' => "Заявка с сайта luuk.by \n$comment_1",
 				'customFields' => array(
 					'type_sales' => 6,
 			),
