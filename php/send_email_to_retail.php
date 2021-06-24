@@ -2,35 +2,23 @@
 
 header("Content-Type: text/html; charset=utf-8");
 
-// $email = $_POST['email_footer'];
-$email = $_POST['EMAIL'];
+$email = $_POST['email_footer'];
 $country_id = 'BY';
 
 $RETAIL_URL = 'https://instagram234.retailcrm.ru';
-$RETAIL_API_KEY = 'ivLKeYDHvgQTt0KSqwovmfw4dWy63gO4'; 
+$RETAIL_API_KEY = 'GihWOTo6kYdqjOSVRKElSIQX93xqjVnj';
 
-
-// $postData = http_build_query(array(
-//     'customer' => json_encode(array(
-// 			'email' => $email,
-// 			'externalId'=> 'sdd33',
-//     )),
-// 		'site' => 'www-instagram-com-luuk-by',
-//     'apiKey' => $RETAIL_API_KEY,
-// ));
 
 $postData = http_build_query(array(
-	'order' => json_encode(array(
-		'phone' => $email,
-		'status' => 'new',
-		'orderMethod' => 'zaiavka-s-saita-luuk-by',
-		'customFields' => array(
-					'type_sales' => 1,
-	),
-			'managerComment' => 'форма email подписки с сайта luuk.by',
-	)),
-	'site' => 'www-instagram-com-luuk-by',
-	'apiKey' => $RETAIL_API_KEY,
+    'customer' => json_encode(array(
+			'email' => $email,
+			'externalId'=> 'luuk-by-footer-form',
+			'customFields' => array(
+									'stick_comment' => 'luuk.by e-mail форма с подвала сайта',
+					),
+    )),
+		'site' => 'www-instagram-com-luuk-by',
+    'apiKey' => $RETAIL_API_KEY,
 ));
 
 
@@ -45,9 +33,8 @@ $opts = array('http' =>
 $context  = stream_context_create($opts);
 $result = json_decode(
     file_get_contents(
-        // $RETAIL_URL . '/api/v4/customers/create', 
-				$RETAIL_URL . '/api/v4/orders/create', 
-        false, 
+        $RETAIL_URL . '/api/v4/customers/create', 
+				false, 
         $context
     ),
     true
@@ -61,11 +48,6 @@ $text = "
 email: ".$_POST['email_footer']."
 Время заказа: ".date("Y-m-d H:i:s");
 mail($email, $title, $text);
-// if(mail($email, $title, $text)) {
-// 	header('Location: /');
-// } else {
-// 	echo "Ошибка.";
-// }
  ?>
 
 

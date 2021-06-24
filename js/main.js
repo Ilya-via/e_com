@@ -960,39 +960,27 @@ $(document).on("keyup", '#tov_name_header', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function showDir() {
 	Swal.fire({
 		title: "Помогите нам развиваться быстрее. ",
 		html: `<h3 style="font-size:120%;">Задайте вопрос, поделитесь мнением о продукте и сервисе, расскажите, как улучшить сайт или работу специалистов. Все замечания и предложения важны, ведь благодаря вашему мнению мы становимся лучше.</h3>
-      <form class="order_form1" method="POST" action="/php/send_email_to_retail.php">
+      <form class="order_form1" id="order_form1" method="POST" action="/php/ed.php" onsubmit='setButtonSubmitProperties("btn_1")'>
       <div>
       <input autocomplete="off" name='name' class="inputq" placeholder="Введите ваше имя"/>
       </div>
       <div>
-      <input autocomplete="off" name='phone' class="inputq minLength="7" maxLength="13" placeholder="Введите ваш телефон"/>
+      <input autocomplete="off" required name='phone' class="inputq minLength="7" maxLength="13" placeholder="Введите ваш телефон"/>
       </div>
       <div>
-      <input autocomplete="off" name='email' type='email' class="inputq" placeholder="Введите вашу почту"/>
+      <input autocomplete="off" required name='email' type='email' class="inputq" placeholder="Введите вашу почту"/>
       </div>
       <div>
       <textarea name='obr' placeholder="Введите ваше обращение" rows="10" cols="45" name="text"></textarea>
       </div>
-      <button tyle='submit'>Отправить обращение</button>
+      <button id="btn_1"  type='submit'>Отправить обращение</button>
       </form>
     `,
-	});
+	})
 }
 
 function openItemModal(
@@ -1018,12 +1006,12 @@ function openItemModal(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail.php" method="post">
+		<form id="order_form1" class="order_form" action="/php/send_tovar_to_retail.php" method="post" onsubmit='setButtonSubmitProperties("btn_2")'>
 		<input type="hidden" class="input" placeholder="Количество" id="col_item" name="colichestvo" value="">
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="color_item" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
 		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
-		<button class="button">Оформить заказ</button>
+		<button id="btn_2" class="button">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
 						Я согласен с политикой конфиденциальности и пользовательским соглашением
@@ -1062,12 +1050,12 @@ function openItemModalBanner(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__banner.php" method="post">
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__banner.php" method="post" onsubmit='setButtonSubmitProperties("btn_3")'>
 		<input type="hidden" class="input" placeholder="Количество" id="col_item" name="colichestvo" value="">
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="color_item" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
 		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
-		<button class="button">Оформить заказ</button>
+		<button class="button" id="btn_3">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
 						Я согласен с политикой конфиденциальности и пользовательским соглашением
@@ -1100,14 +1088,14 @@ function openItemModalSetTwo(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_2.php" method="post">
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_2.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
 		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
 		<input type="hidden" id="popup_price" name="popup_price" value="${price_new}">
 
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
 		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
-		<button class="button">Оформить заказ</button>
+		<button class="button" id="btn_4">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
 						Я согласен с политикой конфиденциальности и пользовательским соглашением
@@ -1142,14 +1130,14 @@ function openItemModalSetThree(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_3.php" method="post">
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_3.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
 		<input type="hidden" id="product_2" name="product_2" value="${id_2}">
 		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
 		<input type="hidden" id="popup_price" name="popup_price" value="${price_new}">
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
 		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
-		<button class="button">Оформить заказ</button>
+		<button class="button" id="btn_4">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
 						Я согласен с политикой конфиденциальности и пользовательским соглашением
@@ -1185,7 +1173,7 @@ function openItemModalSetFour(
 		</div>
 		<br>
 			<br>
-		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_4.php" method="post">
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_4.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
 		<input type="hidden" id="product_2" name="product_3" value="${id_3}">
 		<input type="hidden" id="product_2" name="product_2" value="${id_2}">
 		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
@@ -1193,7 +1181,7 @@ function openItemModalSetFour(
 		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
 		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
 		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
-		<button class="button">Оформить заказ</button>
+		<button class="button" id="btn_4">Оформить заказ</button>
 		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
 						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
 						Я согласен с политикой конфиденциальности и пользовательским соглашением
@@ -1202,4 +1190,11 @@ function openItemModalSetFour(
     `,
 	});
 
+}
+
+function setButtonSubmitProperties(button_id) {
+	let btnn = document.getElementById(button_id);
+	btnn.style.opacity = "0.7";
+	btnn.textContent = "Отправка...";
+	btnn.disabled = true;
 }
