@@ -239,21 +239,13 @@
 						<div class="mobile_phone"><a href="tel:+375298853816">+375 (29) 885-38-16</a></div>
 						<div class="col-lg-7 col-md-7 v-center header-search hidden-xs hidden-sm">
 
-							<form method="get" class="searchform ajax-search" action="" role="search">
-								<input type="hidden" name="type" value="product">
-								<input type="text" name="qq" class="form-control" placeholder="покупаю для...">
+							<form class="" >
+								<input type="text" autocomplete="off" maxlength="40" name="tov_name_header" id="tov_name_header"
+									class="form-control" placeholder="Поиск товара">
 
-								<ul class="list-product-search hidden-xs hidden-sm">
-									<li>
-										<a class="flex align-center" href="/product_robot.html">
-											<div class="product-img">
-												<img src="img/product/hit_tov_4.png" alt="">
-											</div>
-											<h3 class="product-title">Робот Пылесос</h3>
-										</a>
-									</li>
+								<ul class="list-product-search hidden-xs hidden-sm" id="header-find__tovar-list">
+									<li><p>Поиск не производился (введите название товара)</p></li>
 								</ul>
-
 								<!-- <div class="search-panel">
 									<a class="dropdown-toggle" data-toggle="dropdown" href='#'>Категории <span
 											class="fa fa-caret-down"></span></a>

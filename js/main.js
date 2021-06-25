@@ -856,17 +856,32 @@ $(document).ready(function () {
 });
 
 // Скрыть блок при клике вне его.
-jQuery(function ($) {
-	$(document).mouseup(function (e) { // событие клика по веб-документу
-		var div = $(".vertical-wrapper"); // тут указываем ID элемента
-		if (!div.is(e.target) // если клик был не по нашему блоку
-			&&
-			div.has(e.target).length === 0) { // и не по его дочерним элементам
-			div.hide(); // скрываем его
-			// $('.navbar-toggles.navbar-drop.js-vertical-menu').removeClass('active');
-		}
+hiddenBlockEventClick(".vertical-wrapper");
+
+function hiddenBlockEventClick(block) {
+	jQuery(function ($) {
+		$(document).mouseup(function (e) { // событие клика по веб-документу
+			var div = $(block); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+				&&
+				div.has(e.target).length === 0) { // и не по его дочерним элементам
+				div.hide(); // скрываем его
+				// $('.navbar-toggles.navbar-drop.js-vertical-menu').removeClass('active');
+			}
+		});
 	});
-});
+}
+// jQuery(function ($) {
+// 	$(document).mouseup(function (e) { // событие клика по веб-документу
+// 		var div = $(".vertical-wrapper"); // тут указываем ID элемента
+// 		if (!div.is(e.target) // если клик был не по нашему блоку
+// 			&&
+// 			div.has(e.target).length === 0) { // и не по его дочерним элементам
+// 			div.hide(); // скрываем его
+// 			// $('.navbar-toggles.navbar-drop.js-vertical-menu').removeClass('active');
+// 		}
+// 	});
+// });
 
 // Логика поиска товара
 // $(document).on("touchstart", button, function () {
@@ -892,71 +907,370 @@ let tovarObj = [
 		link: '/product_disco_ball.html',
 		img_link: 'img/product/tovar_127.png',
 	},
+	airpods_pro = {
+		title: 'Наушники Копия AirPods Pro',
+		link: '/product_airpods_pro.html',
+		img_link: 'img/product/tovar_125.png',
+	},
+	gamak_mexico = {
+		title: 'Гамак Мексиканский',
+		link: '/product_gamak_mexico.html',
+		img_link: 'img/product/nov_tov_8.png',
+	},
+	fitness_bras = {
+		title: 'Фитнес браслет M6',
+		link: '/product_fitness_bras.html',
+		img_link: 'img/product/hit_tov_3.png',
+	},
+	airbuds = {
+		title: 'Наушники Беспроводные Airbuds',
+		link: '/product_airbuds.html',
+		img_link: 'img/product/hit_tov_2.png',
+	},
+	odeyalo_2_pillows = {
+		title: 'Одеяло + 2 Подушки',
+		link: '/product_odeyalo_2_pillows.html',
+		img_link: 'img/product/action_tov_3.png',
+	},
+	shvabra_samo = {
+		title: 'Швабра Самоочищающаяся',
+		link: '/product_shvabra_samo.html',
+		img_link: 'img/product/hit_tov_6.png',
+	},
+	clean = {
+		title: 'Чистящее Средство',
+		link: '/product_clean.html',
+		img_link: 'img/product/hit_tov_7.png',
+	},
+	svabra_rasp = {
+		title: 'Швабра С Распылителем',
+		link: '/product_svabra_rasp.html',
+		img_link: 'img/product/hit_tov_8.png',
+	},
+	conditioner = {
+		title: 'Кондиционер Arctic Air',
+		link: '/product_conditioner.html',
+		img_link: 'img/product/tovar_131.jpg',
+	},
+	nochnik_nebo = {
+		title: 'Ночник Звёздное Небо',
+		link: '/product_nochnik_nebo.html',
+		img_link: 'img/product/tovar_113.png',
+	},
+	pillow_with_grecha = {
+		title: 'Подушка С Наполнителем (Гречка)',
+		link: '/product_pillow_with_grecha.html',
+		img_link: 'img/product/tovar_128.png',
+	},
+	podstavki = {
+		title: 'Подставки Антивибрационные',
+		link: '/product_podstavki.html',
+		img_link: 'img/product/tovar_109.png',
+	},
+	avto_sos = {
+		title: 'Автомобильный Пылесос',
+		link: '/product_avto_sos.html',
+		img_link: 'img/product/pilesos_tov.png',
+	},
+	scratch_remedy = {
+		title: 'Средство Для Удаления Царапин',
+		link: '/product_scratch_remedy.html',
+		img_link: 'img/product/nov_tov_2.png',
+	},
+	nipples = {
+		title: 'Ниппели Светодиодные',
+		link: '/product_nipples.html',
+		img_link: 'img/product/nov_tov_3.png',
+	},
+	сar_holder = {
+		title: 'Держатель Автомобильный',
+		link: '/product_сar_holder.html',
+		img_link: 'img/product/nov_tov_4.png',
+	},
+	trimer_sad = {
+		title: 'Беспроводной Садовый Триммер',
+		link: '/product_trimer_sad.html',
+		img_link: 'img/product/nov_tov_5.png',
+	},
+	parnik_exp = {
+		title: 'Парники Эксперт',
+		link: '/product_parnik_exp.html',
+		img_link: 'img/product/nov_tov_6.png',
+	},
+	сultivator = {
+		title: 'Культиватор Торнадика',
+		link: '/product_сultivator.html',
+		img_link: 'img/product/nov_tov_7.png',
+	},
+	led_lamp = {
+		title: 'Светильник Светодиодный Эвербрайт',
+		link: '/product_led_lamp.html',
+		img_link: 'img/product/tovar_100.png',
+	},
+	lamzak = {
+		title: 'Ламзак Надувной',
+		link: '/product_lamzak.html',
+		img_link: 'img/product/tovar_112.png',
+	},
+	dozator = {
+		title: 'Дозатор Для Зубной Пасты',
+		link: '/product_dozator.html',
+		img_link: 'img/product/tovar_129.png',
+	},
+	roller = {
+		title: 'Флеш-Роллеры + Светящиеся Шнурки',
+		link: '/product_roller.html',
+		img_link: 'img/product/tovar_104.png',
+	},
+	zont_kapsulni = {
+		title: 'Зонт Капсульный',
+		link: '/product_zont_kapsulni.html',
+		img_link: 'img/product/tovar_111.png',
+	},
+	deti_kovrik = {
+		title: 'Детский Коврик Аквариум',
+		link: '/product_deti_kovrik.html',
+		img_link: 'img/product/tovar_110.png',
+	},
+	magnit_res = {
+		title: 'Магнитные Ресницы',
+		link: '/product_magnit_res.html',
+		img_link: 'img/product/nov_tov_1.jpg',
+	},
+	mask_black_head = {
+		title: 'Маска От Черных Точек Black Head',
+		link: '/product_mask_black_head.html',
+		img_link: 'img/product/tovar_126.png',
+	},
+	teip_face = {
+		title: 'Тейп Для Лица',
+		link: '/product_teip_face.html',
+		img_link: 'img/product/tovar_106.png',
+	},
+	tonal = {
+		title: 'Крем Тональный',
+		link: '/product_tonal.html',
+		img_link: 'img/product/tovar_107.png',
+	},
+	mask_lifting = {
+		title: 'Лифтинговая Маска Для Лица',
+		link: '/product_mask_lifting.html',
+		img_link: 'img/product/mask_for_face.png',
+	},
+	podvodka = {
+		title: '4D Подводка',
+		link: '/product_4d_podvodka.html',
+		img_link: 'img/product/tovar_132.png',
+	},
+	tush = {
+		title: '4D Тушь',
+		link: '/product_4d_tush.html',
+		img_link: 'img/product/tovar_119.png',
+	},
+	makeup_brushes = {
+		title: 'Набор Кисточек Для Макияжа',
+		link: '/product_makeup_brushes.html',
+		img_link: 'img/product/tovar_133.jpg',
+	},
+	lens = {
+		title: 'Линзы Цветные Freshlook Colorblends',
+		link: '/product_lens.html',
+		img_link: 'img/product/tovar_124.png',
+	},
+	viniri = {
+		title: 'Виниры Snap On Smile',
+		link: '/product_viniri.html',
+		img_link: 'img/product/tovar_115.png',
+	},
+	mask_hair = {
+		title: 'Маска Для Роста Волос',
+		link: '/product_mask_hair.html',
+		img_link: 'img/product/tovar_139.png',
+	},
+	female_stockings = {
+		title: 'Колготки Женские',
+		link: '/product_female_stockings.html',
+		img_link: 'img/product/tovar_123.png',
+	},
+	trimmer = {
+		title: 'Триммер С Насадками',
+		link: '/product_trimmer.html',
+		img_link: 'img/product/tovar_118.png',
+	},
+	eyebrow_marker = {
+		title: 'Водостойкий Маркер Для Бровей',
+		link: '/product_eyebrow_marker.html',
+		img_link: 'img/product/tovar_116.png',
+	},
+	massage_gun = {
+		title: 'Массажер Терапевтический Пистолет',
+		link: '/product_massage_gun.html',
+		img_link: 'img/product/massage_gun.png',
+	},
+	corrector_magnetic = {
+		title: 'Корректор Осанки Магнитный',
+		link: '/product_corrector_magnetic.html',
+		img_link: 'img/product/tovar_108.png',
+	},
+	slimming_patch = {
+		title: 'Пластырь Для Похудения',
+		link: '/product_slimming_patch.html',
+		img_link: 'img/product/tovar_121.png',
+	},
+	body_shaping = {
+		title: 'Комбидресс Для Коррекции Фигуры',
+		link: '/product_body_shaping.html',
+		img_link: 'img/product/tovar_134.png',
+	},
+	orthopedic_pillow_ostio = {
+		title: 'Подушка Ортопедическая Ostio',
+		link: '/product_orthopedic_pillow_ostio.html',
+		img_link: 'img/product/tovar_122.png',
+	},
+	set_of_pots = {
+		title: 'Набор Кастрюль',
+		link: '/product_set_of_pots.html',
+		img_link: 'img/product/kastruli.png',
+	},
+	vegetable_cutter = {
+		title: 'Тёрка Овощерезка С Контейнером',
+		link: '/product_vegetable_cutter.html',
+		img_link: 'img/product/tovar_102.png',
+	},
+	knife_set = {
+		title: 'Набор Ножей 6 В 1',
+		link: '/product_knife_set.html',
+		img_link: 'img/product/tovar_101.png',
+	},
+	filter_1 = {
+		title: 'Фильтр Для Воды',
+		link: '/product_filter_1.html',
+		img_link: 'img/product/tovar_135.png',
+	},
+	manual_juicer = {
+		title: 'Соковыжималка Ручная',
+		link: '/product_manual_juicer.html',
+		img_link: 'img/product/tovar_136.jpg',
+	},
+	manual_mixer = {
+		title: 'Миксер Ручной',
+		link: '/product_manual_mixer.html',
+		img_link: 'img/product/tovar_137.jpg',
+	},
+	scaler_fishman = {
+		title: 'Рыбочистка Fishman',
+		link: '/product_scaler_fishman.html',
+		img_link: 'img/product/tovar_138.jpg',
+	},
+	automatic_animal_feeder = {
+		title: 'Кормушка Для Животных Автоматическая',
+		link: '/product_automatic_animal_feeder.html',
+		img_link: 'img/product/tovar_130.png',
+	},
+	pet_grooming_kit = {
+		title: 'Набор Для Ухода За Питомцем',
+		link: '/product_pet_grooming_kit.html',
+		img_link: 'img/product/tovar_103.png',
+	},
+	animal_ottoman = {
+		title: 'Пуфик Для Животных',
+		link: '/product_animal_ottoman.html',
+		img_link: 'img/product/puf_for_animal.png',
+	},
+
+
+
+
+
 ]
-let findArray = [];
+let findArray = [],
+	gotovoe,
+	trigger_for_create_html;
 $(document).on("keyup", '#tov_name_header', function () {
-	// $(this).val()
-	tovarObj.forEach(
-		function (item, index) {
-			// console.log(item);
-			if ($('#tov_name_header').val().toLowerCase().trim().replace(/-/g, ' ') == item.title.toLowerCase().trim().replace(/-/g, ' ')) {
-				findArray.push(item);
-			}
-			// console.log(item.title.toLowerCase().trim().replace(/-/g, ' '));
-			// let stringValue = $(this);
-			// if (stringValue.includes('|')) {
-			// 	stringValue = stringValue.split('|')[0].trim();
-			// }
-			// findArray.push(stringValue);
-		});
-	// console.log(findArray);
+	if ($('#tov_name_header').val().length > 1) {
+		gotovoe = '';
+		clearBlockTovar('#header-find__tovar-list');
+		comparisonInputValueWithTovarValue();
+		createHtmlTovar();
+	}
+	if ($('#tov_name_header').val().length < 2) {
+		drawFindTovar('<li><p>Введите 2 символа или больше</p></li>')
+	}
+});
+$(document).on("focusin", '#tov_name_header', function () {
+	$('#header-find__tovar-list').fadeIn(400, 0, "linear");
 });
 
+jQuery(function ($) {
+	$(document).mouseup(function (e) {
+		var div = $('#header-find__tovar-list');
+		if (!(div.is(e.target) || $('#tov_name_header').is(e.target)) && div.has(e.target).length === 0) {
+			div.hide();
+		}
+	});
+});
 
-// tovarObj.forEach(
-// 	function () {
-// 		let stringValue = $(this).text().toLowerCase();
-// 		if (stringValue.includes('|')) {
-// 			stringValue = stringValue.split('|')[0].trim();
-// 		}
-// 		findArray.push(stringValue);
-// 	});
+function comparisonInputValueWithTovarValue() {
+	tovarObj.forEach(
+		function (item, index) {
 
-// function pushTovar() {
-// 	$("#regTitle").html("Hello World");
-// }
-
-// function findTovar() {
-// 	if (!($('#tov_name_header').val() == '' || $('#tov_name_header').val() ==
-// 			null || $('#tov_name_header').val() == undefined)) {
-
-// 		if (findArray.includes($('#tov_name_header').val().trim().toLowerCase())) {
-// 			// $("#regTitle").html("Hello World");
-// 			$('.find__pop-up-image').addClass('find__pop-up-image--true');
-// 			$('.find__pop-up').fadeTo(300, 1, "linear");
-// 			// popUpText('Город есть в списке.');
-// 			// setTimeout(animatedHide, 3000);
-// 		} else {
-// 			$('.find__pop-up-image').addClass('find__pop-up-image--false');
-// 			$('.find__pop-up').fadeTo(300, 1, "linear");
-// 			// popUpText('Город не внесён в список.');
-// 			// setTimeout(animatedHide, 3000);
-// 		}
-// 	}
-// }
-
-// Enter
-// $(".tov_name_header").on("keyup", function (event) {
-// 	if (event.keyCode === 13) {
-// 		event.preventDefault();
-// 		findTovar();
-// 	}
-// });
+			let inputValue = $('#tov_name_header').val().toLowerCase().trim().replace(/-/g, ' '),
+				massiveValue = item.title.toLowerCase().trim().replace(/-/g, ' ');
+			// console.log(inputValue);
+			// console.log(massiveValue);
 
 
-// $(".city_links__find_button").on("click", function (e) {
-// 	findTovar();
-// });
+			if (massiveValue.includes(inputValue, 0)) {
+				findArray.push(item);
+			}
+			if (massiveValue.includes(inputValue, 0) == true) {
+				trigger_for_create_html = true;
+			}
+		});
+}
+
+function createHtmlTovar() {
+
+	findArray.forEach(
+		function (item, index) {
+			gotovoe = gotovoe + templateTovar(item.title, item.link, item.img_link);
+
+		});
+	if (trigger_for_create_html) {
+		drawFindTovar(gotovoe);
+	} else {
+		drawFindTovar('<li><p>Товар не найден</p></li>')
+	}
+	clearfindArray(findArray);
+	gotovoe = '';
+	trigger_for_create_html = '';
+
+}
+
+function drawFindTovar(drawHtmlValue) {
+	$('#header-find__tovar-list').html(drawHtmlValue);
+}
+
+function templateTovar(title_g, link_g, img_link_g) {
+	return `<li>
+		<a class="flex align-center" href="${link_g}">
+			<div class="product-img">
+				<img src="${img_link_g}" alt="">
+			</div>
+			<h3 class="product-title">${title_g}</h3>
+		</a>
+	</li>
+
+	`
+}
+
+function clearfindArray(massive_name) {
+	massive_name.splice(0, massive_name.length)
+}
+
+function clearBlockTovar(block_id) {
+	$(block_id).html(``);
+}
 
 
 
