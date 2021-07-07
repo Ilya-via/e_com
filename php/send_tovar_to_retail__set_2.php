@@ -11,9 +11,17 @@ $crmKey = 'GihWOTo6kYdqjOSVRKElSIQX93xqjVnj';
 $product_id = $_POST['product'];
 $product_2_id= $_POST['product_1'];
 $product_price= $_POST['popup_price'];
-$comment_1;
+$comment_1 = '';
+
 if ($product_id == 'clean_robot' && $product_2_id == 'podarok_k_sety') {
-	$comment_1 = "Давать товар в подарок, на выбор: фен Моузер Cromoser ИЛИ триммер СтаблБерд \nВнешний код: \nmouzer_fen_blr \nstabl_bird_blr";
+	$comment_1 = "\nКЛИЕНТ ЦЕНУ НЕ ВИДЕЛ!\nДавать товар в подарок, на выбор: фен Моузер Cromoser ИЛИ триммер СтаблБерд \nВнешний код: \nmouzer_fen_blr \nstabl_bird_blr";
+}
+if (
+	($product_id == 'apple_watch' && $product_2_id == 'airbuds_blr') ||
+	($product_id == 'apple_watch' && $product_2_id == 'beats_blr') ||
+	($product_id == 'air_pods_pro_1' && $product_2_id == 'golden_bank')
+	) {
+	$comment_1 = "\nКЛИЕНТ ЦЕНУ НЕ ВИДЕЛ!";
 }
 
 $postData = http_build_query(array(
@@ -22,7 +30,7 @@ $postData = http_build_query(array(
         'phone' => $phone,
 				'orderMethod' => 'zaiavka-s-saita-luuk-by',
 				'status' => 'new',
-        'managerComment' => "Заявка с сайта luuk.by \n$comment_1",
+        'managerComment' => "Заявка с сайта luuk.by $comment_1",
 				'customFields' => array(
 					'type_sales' => 6,
 			),

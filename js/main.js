@@ -871,25 +871,7 @@ function hiddenBlockEventClick(block) {
 		});
 	});
 }
-// jQuery(function ($) {
-// 	$(document).mouseup(function (e) { // событие клика по веб-документу
-// 		var div = $(".vertical-wrapper"); // тут указываем ID элемента
-// 		if (!div.is(e.target) // если клик был не по нашему блоку
-// 			&&
-// 			div.has(e.target).length === 0) { // и не по его дочерним элементам
-// 			div.hide(); // скрываем его
-// 			// $('.navbar-toggles.navbar-drop.js-vertical-menu').removeClass('active');
-// 		}
-// 	});
-// });
 
-// Логика поиска товара
-// $(document).on("touchstart", button, function () {
-// 	$(button).addClass(holdClass);
-// });
-// $(document).on("touchend touchcancel touchleave", button, function () {
-// 	$(button).removeClass(holdClass);
-// });
 
 let tovarObj = [
 	robot_sos = {
@@ -1178,11 +1160,11 @@ let tovarObj = [
 		img_link: 'img/product/puf_for_animal.png',
 	},
 
-
-
-
-
 ]
+
+
+
+
 let findArray = [],
 	gotovoe,
 	trigger_for_create_html;
@@ -1511,4 +1493,135 @@ function setButtonSubmitProperties(button_id) {
 	btnn.style.opacity = "0.7";
 	btnn.textContent = "Отправка...";
 	btnn.disabled = true;
+}
+
+
+
+
+
+
+
+
+
+
+function openItemModalSetTwoWithoutPrice(
+	id,
+	id_1,
+	title,
+	img,
+	price_new,
+) {
+
+
+	Swal.fire({
+		html: `
+		<div class="box-modal__image">
+		<img src="${img}">
+		</div>
+		<div class="box-modal__title">${title}</div>
+		<br>
+		<div class="card_price">
+		<span>Цену уточняйте у менеджера</span>
+		</div>
+		<br>
+			<br>
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_2.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
+		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
+		<input type="hidden" id="popup_price" name="popup_price" value="${price_new}">
+
+		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
+		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
+		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
+		<button class="button" id="btn_4">Оформить заказ</button>
+		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
+						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
+						Я согласен с политикой конфиденциальности и пользовательским соглашением
+		</label>
+		</form>
+    `,
+	});
+
+}
+
+
+function openItemModalSetThreeWithoutPrice(
+	id,
+	id_1,
+	id_2,
+	title,
+	img,
+	price_new,
+) {
+
+
+	Swal.fire({
+		html: `
+		<div class="box-modal__image">
+		<img src="${img}">
+		</div>
+		<div class="box-modal__title">${title}</div>
+		<br>
+		<div class="card_price">
+		<span>Цену уточняйте у менеджера</span>
+		</div>
+		<br>
+			<br>
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_3.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
+		<input type="hidden" id="product_2" name="product_2" value="${id_2}">
+		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
+		<input type="hidden" id="popup_price" name="popup_price" value="${price_new}">
+		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
+		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
+		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
+		<button class="button" id="btn_4">Оформить заказ</button>
+		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
+						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
+						Я согласен с политикой конфиденциальности и пользовательским соглашением
+		</label>
+		</form>
+    `,
+	});
+
+}
+
+function openItemModalSetFourWithoutPrice(
+	id,
+	id_1,
+	id_2,
+	id_3,
+	title,
+	img,
+	price_new,
+) {
+
+
+	Swal.fire({
+		html: `
+		<div class="box-modal__image">
+		<img src="${img}">
+		</div>
+		<div class="box-modal__title">${title}</div>
+		<br>
+		<div class="card_price">
+		<span>Цену уточняйте у менеджера</span>
+		</div>
+		<br>
+			<br>
+		<form id="order_form" class="order_form" action="/php/send_tovar_to_retail__set_4.php" method="post" onsubmit='setButtonSubmitProperties("btn_4")'>
+		<input type="hidden" id="product_2" name="product_3" value="${id_3}">
+		<input type="hidden" id="product_2" name="product_2" value="${id_2}">
+		<input type="hidden" id="product_1" name="product_1" value="${id_1}">
+		<input type="hidden" id="popup_price" name="popup_price" value="${price_new}">
+		<input type="hidden" class="input" placeholder="АЙ ДИ" id="product" name="product" value="${id}">
+		<input class="input" id="order_form_name" type="text" name="order_form_name" placeholder="Имя: Иван" required="">
+		<input class="input" id="order_form_phone" type="tel" name="order_form_phone" placeholder="Телефон: 375 ХХ ХХХ ХХ ХХ" required="" minlength="7" maxlength="13">
+		<button class="button" id="btn_4">Оформить заказ</button>
+		<label style="font-size: 13px; line-height: 13px;margin-top:15px;width:100%;display:block;text-align: center;">
+						<input type="checkbox" checked="" required="" style="-webkit-appearance:checkbox;display:inline-block;width:auto;height: auto">
+						Я согласен с политикой конфиденциальности и пользовательским соглашением
+		</label>
+		</form>
+    `,
+	});
+
 }

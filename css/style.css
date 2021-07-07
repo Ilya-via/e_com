@@ -22442,7 +22442,7 @@ span.star:before {
 .tags {
 	padding-top: 25px;
 	font-size: 12px;
-	text-align: center;
+	text-align: left;
 }
 
 .tags span {

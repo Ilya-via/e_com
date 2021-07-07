@@ -13,7 +13,11 @@ $product_2_id= $_POST['product_1'];
 $product_3_id= $_POST['product_2'];
 $product_4_id= $_POST['product_3'];
 $product_price= $_POST['popup_price'];
+$comment_1 = '';
 
+if ($product_id == 'kolonka_3' && $product_2_id == 'dsafdfsdf' && $product_3_id == 'golden_bank' && $product_4_id == 'qweqweqw') {
+	$comment_1 = "\nКЛИЕНТ ЦЕНУ НЕ ВИДЕЛ!";
+}
 
 $postData = http_build_query(array(
     'order' => json_encode(array(
@@ -21,7 +25,7 @@ $postData = http_build_query(array(
         'phone' => $phone,
         'orderMethod' => 'zaiavka-s-saita-luuk-by',
 				'status' => 'new',
-        'managerComment' => "Заявка с сайта luuk.by",
+        'managerComment' => "Заявка с сайта luuk.by $comment_1",
 				'customFields' => array(
 					'type_sales' => 6,
 			),

@@ -44,7 +44,7 @@ elseif($product == 'air_pods') {
     $product_price = 190;
 }
 elseif($product == 'gamak_mexico') {
-    $product_id = "gamak";
+    $product_id = "gamak_new";
     $product_price = 79.99;
 }
 elseif($product == 'odeyalo_1') {
