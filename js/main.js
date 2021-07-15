@@ -890,7 +890,7 @@ let tovarObj = [
 		img_link: 'img/product/tovar_127.png',
 	},
 	airpods_pro = {
-		title: 'Наушники Копия AirPods Pro',
+		title: 'Наушники Копия Pro',
 		link: '/product_airpods_pro.html',
 		img_link: 'img/product/tovar_125.png',
 	},
