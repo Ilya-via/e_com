@@ -13838,6 +13838,9 @@ span.star:before {
 .product-inner {
 	position: relative;
 }
+.product-inner:hover {
+	cursor:pointer;
+}
 
 @media (min-width: 1025px) {
 	.product-inner.v2:after {
