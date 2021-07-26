@@ -1625,3 +1625,8 @@ function openItemModalSetFourWithoutPrice(
 	});
 
 }
+
+function goToPage(value)
+{
+	document.location.href = value;
+}

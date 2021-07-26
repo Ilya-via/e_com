@@ -13838,8 +13838,10 @@ span.star:before {
 .product-inner {
 	position: relative;
 }
-.product-inner:hover {
-	cursor:pointer;
+#best-sellers_1 .h-banner-content p:hover ,
+#product-tab_1 .product-title a:hover ,
+#product-tab_1 .product-price:hover {
+	cursor:pointer !important;
 }
 
 @media (min-width: 1025px) {
