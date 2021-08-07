@@ -1054,16 +1054,16 @@ let tovarObj = [
 		link: '/product_makeup_brushes.html',
 		img_link: 'img/product/tovar_133.jpg',
 	},
-	lens = {
-		title: 'Линзы Цветные Freshlook Colorblends',
-		link: '/product_lens.html',
-		img_link: 'img/product/tovar_124.png',
-	},
-	viniri = {
-		title: 'Виниры Snap On Smile',
-		link: '/product_viniri.html',
-		img_link: 'img/product/tovar_115.png',
-	},
+	// lens = {
+	// 	title: 'Линзы Цветные Freshlook Colorblends',
+	// 	link: '/product_lens.html',
+	// img_link: 'img/product/tovar_124.png',
+	// },
+	// viniri = {
+	// 	title: 'Виниры Snap On Smile',
+	// 	link: '/product_viniri.html',
+	// 	img_link: 'img/product/tovar_115.png',
+	// },
 	mask_hair = {
 		title: 'Маска Для Роста Волос',
 		link: '/product_mask_hair.html',
@@ -1094,11 +1094,11 @@ let tovarObj = [
 		link: '/product_corrector_magnetic.html',
 		img_link: 'img/product/tovar_108.png',
 	},
-	slimming_patch = {
-		title: 'Пластырь Для Похудения',
-		link: '/product_slimming_patch.html',
-		img_link: 'img/product/tovar_121.png',
-	},
+	// slimming_patch = {
+	// 	title: 'Пластырь Для Похудения',
+	// 	link: '/product_slimming_patch.html',
+	// 	img_link: 'img/product/tovar_121.png',
+	// },
 	body_shaping = {
 		title: 'Комбидресс Для Коррекции Фигуры',
 		link: '/product_body_shaping.html',
@@ -1109,11 +1109,11 @@ let tovarObj = [
 		link: '/product_orthopedic_pillow_ostio.html',
 		img_link: 'img/product/tovar_122.png',
 	},
-	set_of_pots = {
-		title: 'Набор Кастрюль',
-		link: '/product_set_of_pots.html',
-		img_link: 'img/product/kastruli.png',
-	},
+	// set_of_pots = {
+	// 	title: 'Набор Кастрюль',
+	// 	link: '/product_set_of_pots.html',
+	// 	img_link: 'img/product/kastruli.png',
+	// },
 	vegetable_cutter = {
 		title: 'Тёрка Овощерезка С Контейнером',
 		link: '/product_vegetable_cutter.html',
@@ -1626,7 +1626,6 @@ function openItemModalSetFourWithoutPrice(
 
 }
 
-function goToPage(value)
-{
+function goToPage(value) {
 	document.location.href = value;
 }
