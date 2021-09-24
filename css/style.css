@@ -84,6 +84,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/* Бесплатная доставка при заказе от 100 byn  */
+.header-bottom-right.hidden-xs.hidden-sm {
+	display: none;
+}
+
+
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
